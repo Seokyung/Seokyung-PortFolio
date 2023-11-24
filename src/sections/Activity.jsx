@@ -1,8 +1,8 @@
-import SectionWrapper from "../styles/SectionWrapper";
+import { SectionWrapper } from "../styles/SectionWrapper";
 
 function Activity() {
 	return (
-		<SectionWrapper background="#596275">
+		<SectionWrapper $background="#596275">
 			<h1>Activity</h1>
 		</SectionWrapper>
 	);

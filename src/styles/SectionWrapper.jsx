@@ -1,13 +1,7 @@
 import styled from "styled-components";
 
-const Wrapper = styled.div`
+export const SectionWrapper = styled.div`
 	width: 100%;
 	padding: 1.5rem 2rem;
-	background: ${(props) => props.background || "inherit"};
+	background: ${(props) => props.$background || "#fff"};
 `;
-
-function SectionWrapper({ children, ...props }) {
-	return <Wrapper {...props}>{children}</Wrapper>;
-}
-
-export default SectionWrapper;

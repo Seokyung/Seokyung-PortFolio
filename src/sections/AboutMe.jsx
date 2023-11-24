@@ -1,8 +1,8 @@
-import SectionWrapper from "../styles/SectionWrapper";
+import { SectionWrapper } from "../styles/SectionWrapper";
 
 function AboutMe() {
 	return (
-		<SectionWrapper background="#f8a5c2">
+		<SectionWrapper $background="#f8a5c2">
 			<h1>AboutMe</h1>
 		</SectionWrapper>
 	);
