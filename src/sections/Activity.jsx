@@ -1,8 +1,10 @@
+import SectionWrapper from "../styles/SectionWrapper";
+
 function Activity() {
 	return (
-		<div>
+		<SectionWrapper background="#596275">
 			<h1>Activity</h1>
-		</div>
+		</SectionWrapper>
 	);
 }
 

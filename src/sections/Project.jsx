@@ -1,8 +1,10 @@
+import SectionWrapper from "../styles/SectionWrapper";
+
 function Project() {
 	return (
-		<div>
+		<SectionWrapper background="#786fa6">
 			<h1>Project</h1>
-		</div>
+		</SectionWrapper>
 	);
 }
 

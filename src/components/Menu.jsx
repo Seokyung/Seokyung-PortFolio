@@ -3,7 +3,7 @@ import seokyung_logo from "../assets/img/seokyung_logo.png";
 
 function Menu() {
 	return (
-		<MenuWrapper>
+		<Wrapper>
 			<Logo href="/">
 				<img src={seokyung_logo} alt="seokyung_logo" />
 				<h1>Seokyung's Portfolio</h1>
@@ -17,11 +17,11 @@ function Menu() {
 					<li>Activities</li>
 				</ul>
 			</Navigation>
-		</MenuWrapper>
+		</Wrapper>
 	);
 }
 
-const MenuWrapper = styled.header`
+const Wrapper = styled.header`
 	position: fixed;
 	top: 0;
 	left: 0;

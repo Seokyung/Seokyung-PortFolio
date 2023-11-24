@@ -1,8 +1,10 @@
+import SectionWrapper from "../styles/SectionWrapper";
+
 function AboutMe() {
 	return (
-		<div>
+		<SectionWrapper background="#f8a5c2">
 			<h1>AboutMe</h1>
-		</div>
+		</SectionWrapper>
 	);
 }
 

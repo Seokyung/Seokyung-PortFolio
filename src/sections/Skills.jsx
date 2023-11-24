@@ -1,8 +1,10 @@
+import SectionWrapper from "../styles/SectionWrapper";
+
 function Skills() {
 	return (
-		<div>
+		<SectionWrapper background="#f3a683">
 			<h1>Skills</h1>
-		</div>
+		</SectionWrapper>
 	);
 }
 
