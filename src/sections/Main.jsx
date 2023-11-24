@@ -1,12 +1,13 @@
-import seokyung_logo from "../assets/img/seokyung_logo.png";
+import styled from "styled-components";
 
 function Main() {
 	return (
-		<div>
+		<MainWrapper>
 			<h1>Main</h1>
-			<img src={seokyung_logo} alt="seokyung_logo" />
-		</div>
+		</MainWrapper>
 	);
 }
+
+const MainWrapper = styled.div``;
 
 export default Main;

@@ -5,9 +5,11 @@ export const GlobalStyle = createGlobalStyle`
 ${reset}
   * {
     box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   body {
-    background-color: red;
+    background-color: #f8f8f8;
   }
   a {
     outline: none;

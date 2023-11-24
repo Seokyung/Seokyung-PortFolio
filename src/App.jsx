@@ -5,19 +5,28 @@ import Skills from "./sections/Skills";
 import Project from "./sections/Project";
 import Activity from "./sections/Activity";
 import Footer from "./components/Footer";
+import styled from "styled-components";
 
 function App() {
 	return (
-		<div>
+		<AppWrapper>
 			<Menu />
-			<Main />
-			<AboutMe />
-			<Skills />
-			<Project />
-			<Activity />
-			<Footer />
-		</div>
+			<div>
+				<Main />
+				<AboutMe />
+				<Skills />
+				<Project />
+				<Activity />
+				<Footer />
+			</div>
+		</AppWrapper>
 	);
 }
+
+const AppWrapper = styled.div`
+	> div {
+		padding-top: 10vh;
+	}
+`;
 
 export default App;
