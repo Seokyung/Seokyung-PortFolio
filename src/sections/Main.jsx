@@ -38,14 +38,14 @@ const Logo = styled.div`
 
 const Introduction = styled.div`
 	flex: 1;
-	h2 {
+	/* h2 {
 		color: #fff;
 		font-size: 2rem;
 	}
 	span {
 		color: #fff;
 		font-size: 1.25rem;
-	}
+	} */
 `;
 
 export default Main;
