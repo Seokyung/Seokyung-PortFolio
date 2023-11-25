@@ -6,6 +6,7 @@ import Project from "./sections/Project";
 import Activity from "./sections/Activity";
 import Footer from "./components/Footer";
 import styled from "styled-components";
+import Introduction from "./sections/Introduction";
 
 function App() {
 	return (
@@ -13,6 +14,7 @@ function App() {
 			<Menu />
 			<div>
 				<Main />
+				<Introduction />
 				<AboutMe />
 				<Skills />
 				<Project />
