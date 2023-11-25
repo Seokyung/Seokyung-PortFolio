@@ -9,7 +9,8 @@ ${reset}
     -moz-osx-font-smoothing: grayscale;
   }
   body {
-    background-color: #f8f8f8;
+    /* background-color: #f8f8f8; */
+    background-color: #111;
   }
   a {
     outline: none;

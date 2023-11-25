@@ -32,7 +32,7 @@ const Wrapper = styled.header`
 	width: 100%;
 	height: 10vh;
 	padding: 0.5rem 0.875rem;
-	background-color: navy;
+	background-color: #111;
 `;
 
 const Logo = styled.a`

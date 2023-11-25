@@ -14,7 +14,7 @@ const Wrapper = styled.footer`
 	align-items: center;
 	width: 100%;
 	height: 15vh;
-	background-color: #000;
+	background-color: #111;
 	h1 {
 		color: #fff;
 	}
