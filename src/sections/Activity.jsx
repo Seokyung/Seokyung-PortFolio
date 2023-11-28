@@ -40,9 +40,9 @@ function Activity() {
 			.filter((el) => el.sector === sector)
 			.map((item) => {
 				return (
-					<SkillBox key={item.id}>
+					<ActivityBox key={item.id}>
 						<span>{item.title}</span>
-					</SkillBox>
+					</ActivityBox>
 				);
 			});
 	};
@@ -70,7 +70,7 @@ const Wrapper = styled.div`
 	margin: 1rem 0;
 `;
 
-const SkillBox = styled.div`
+const ActivityBox = styled.div`
 	padding: 0.5rem;
 	background-color: #fff;
 	h3 {
