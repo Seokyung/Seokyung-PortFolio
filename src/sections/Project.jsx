@@ -6,6 +6,7 @@ const skg_projects = [
 		id: 1,
 		name: "IM",
 		title: "주변인들의 평가와 피드백으로 만들어나가는 나만의 온라인 명함",
+		sector: "Team Project",
 		role: "Web Frontend Developer",
 		period: "2023.08 - ",
 		descriptions: [
@@ -20,6 +21,49 @@ const skg_projects = [
 		skills: ["ReactJS", "JavaScript", "HTML/CSS"],
 		links: ["https://github.com/Wacathon/frontend"],
 	},
+	{
+		id: 2,
+		name: "Rolling-Rolling",
+		title: "웹으로 즐기는 추억의 롤링페이퍼",
+		sector: "Toy Project",
+		role: "Web Frontend Developer",
+		period: "2023.03 - 2023.06",
+		descriptions: [
+			"웹으로 롤링페이퍼를 만들고 지인들과 공유할 수 있는 웹 서비스",
+			"개인 프로젝트로 제작한 서비스로 1인 기획, 개발, 디자인, 배포, 운영중",
+		],
+		works: [
+			"서비스 기획",
+			"전체 기능 개발",
+			"Google Firebase를 이용해 서버, 데이터베이스 연결",
+			"Redux를 이용해 상태 관리",
+		],
+		skills: ["ReactJS", "JavaScript", "Redux", "Firebase", "HTML/CSS"],
+		links: [
+			"https://github.com/Seokyung/Rolling-Rolling",
+			"https://rolling-rolling.web.app/",
+		],
+	},
+	{
+		id: 3,
+		name: "printf_HelloGachon",
+		title: "가천대학교 컴퓨터공학과 새내기를 위한 RPG형 가이드 게임",
+		sector: "Team Project",
+		role: "Web Frontend Developer",
+		period: "2021.03 - 2021.06",
+		descriptions: [
+			"가천대학교 컴퓨터공학과 새내기가 학교 생활의 전반적인 부분을 게임으로 체험해 볼 수 있는 가이드 게임",
+			"모바일, PC버전 모두 지원하는 Top-Down RPG 형식의 픽셀 게임",
+		],
+		works: [
+			"서비스 기획, 개발 방향 설정, 스토리 구성",
+			"캐릭터 능력치 로직 개발",
+			"수강신청 미니게임 구현",
+			"Asset 제작 (교내 맵, 배경, 구조물, 아이콘 등)",
+		],
+		skills: ["Unity", "C#"],
+		links: ["https://github.com/HelloGachon/HelloGachon"],
+	},
 ];
 
 function Project() {
@@ -29,6 +73,7 @@ function Project() {
 				<ProjectBox key={item.id}>
 					<h2>{item.name}</h2>
 					<span>{item.title}</span>
+					<span>{item.sector}</span>
 					<span>{item.role}</span>
 					<span>{item.period}</span>
 					<ContentBox>
