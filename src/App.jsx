@@ -27,7 +27,7 @@ function App() {
 
 const AppWrapper = styled.div`
 	> div {
-		padding-top: 10vh;
+		padding-top: 60px;
 	}
 `;
 

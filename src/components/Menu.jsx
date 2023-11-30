@@ -6,7 +6,7 @@ function Menu() {
 		<Wrapper>
 			<Logo href="/">
 				<img src={seokyung_logo} alt="seokyung_logo" />
-				<h1>Seokyung's Portfolio</h1>
+				<h1>Frontend Developer Seokyung</h1>
 			</Logo>
 			<Navigation>
 				<ul>
@@ -30,8 +30,8 @@ const Wrapper = styled.header`
 	justify-content: space-between;
 	align-items: center;
 	width: 100%;
-	height: 10vh;
-	padding: 0.5rem 0.875rem;
+	height: 60px;
+	padding: 0.75rem 1.25rem;
 	background-color: #111;
 `;
 
@@ -41,14 +41,15 @@ const Logo = styled.a`
 	align-items: center;
 	gap: 0.5rem;
 	img {
-		width: 48px;
+		width: 40px;
 		height: auto;
 	}
 	h1 {
+		flex: 1 1 auto;
 		color: #fff;
-		font-size: 2rem;
+		font-size: 1.5rem;
 		font-weight: 600;
-		line-height: 2rem;
+		line-height: 1.5rem;
 	}
 `;
 
