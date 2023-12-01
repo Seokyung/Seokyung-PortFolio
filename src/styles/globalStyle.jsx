@@ -10,6 +10,7 @@ ${reset}
   }
   body {
     /* background-color: #f8f8f8; */
+    font-family: 'Raleway', sans-serif;
     background-color: #111;
   }
   a {
