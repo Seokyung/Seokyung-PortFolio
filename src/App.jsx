@@ -14,8 +14,8 @@ function App() {
 			<Menu />
 			<div>
 				<Main />
-				<Introduction />
 				<AboutMe />
+				<Introduction />
 				<Skills />
 				<Project />
 				<Activity />

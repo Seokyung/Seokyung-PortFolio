@@ -4,10 +4,16 @@ import reset from "styled-reset";
 export const GlobalStyle = createGlobalStyle`
 ${reset}
 :root {
-  --primary-color: darkorange;
-  --bg-color-primary: #333;
+  // font
   --font-family-kor: "Nanum Gothic";
+  --font-family-kor-title: "Bagel Fat One";
   --font-family-eng: "Raleway";
+  --font-family-eng-title: "Lobster";
+  --font-color-primary: darkorange;
+  --font-color-secondary: #333;
+
+  // background
+  --bg-color-primary: #333;
 }
   * {
     box-sizing: border-box;

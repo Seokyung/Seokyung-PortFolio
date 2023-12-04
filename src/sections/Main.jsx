@@ -7,11 +7,10 @@ function Main() {
 		<SectionWrapper>
 			<Wrapper>
 				<Logo>
-					<img src={seokyung_logo} alt="seokyung_logo" />
+					<img src={seokyung_logo} alt="sk_logo" />
 				</Logo>
 				<Introduction>
 					<h2>안녕하세요!</h2>
-					{/* <h3>Web Frontend Developer Seokyung Jee</h3> */}
 					<span>
 						꾸준히 성장하는 개발자
 						<br />
@@ -48,6 +47,7 @@ const Logo = styled.div`
 	img {
 		width: 100%;
 		max-width: 250px;
+		min-width: 120px;
 	}
 	@media (max-width: 768px) {
 		flex: none;
@@ -61,7 +61,7 @@ const Introduction = styled.div`
 	}
 	h2 {
 		margin-bottom: 1.25rem;
-		color: #333;
+		color: var(--font-color-secondary);
 		font-size: 3rem;
 		font-weight: 800;
 	}
@@ -71,7 +71,7 @@ const Introduction = styled.div`
 		line-height: 2.75rem;
 		#name {
 			margin-right: 0.25rem;
-			color: var(--primary-color);
+			color: var(--font-color-primary);
 			font-size: 2.25rem;
 			font-weight: 800;
 		}
