@@ -6,7 +6,7 @@ export const SectionWrapper = styled.div`
 	justify-content: center;
 	align-items: center;
 	width: 100%;
-	min-height: calc(100vh - 60px);
+	min-height: ${(props) => props.$height || "calc(100vh - 60px)"};
 	padding: 1.5rem 2rem;
-	background: ${(props) => props.$background || "#333"};
+	background: ${(props) => props.$background || "var(--bg-color-primary)"};
 `;

@@ -22,6 +22,7 @@ function Menu() {
 }
 
 const Wrapper = styled.header`
+	z-index: 2;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -32,6 +33,7 @@ const Wrapper = styled.header`
 	width: 100%;
 	height: 60px;
 	padding: 0.75rem 1.25rem;
+	font-family: var(--font-family-eng);
 	background-color: #111;
 `;
 

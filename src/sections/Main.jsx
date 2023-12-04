@@ -71,7 +71,7 @@ const Introduction = styled.div`
 		line-height: 2.75rem;
 		#name {
 			margin-right: 0.25rem;
-			color: darkorange;
+			color: var(--primary-color);
 			font-size: 2.25rem;
 			font-weight: 800;
 		}
