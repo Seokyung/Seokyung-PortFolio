@@ -16,9 +16,9 @@ function App() {
 				<Main />
 				<AboutMe />
 				<Introduction />
-				<Skills />
 				<Project />
 				<Activity />
+				<Skills />
 				<Footer />
 			</div>
 		</AppWrapper>

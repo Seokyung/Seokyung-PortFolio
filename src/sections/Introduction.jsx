@@ -48,7 +48,8 @@ function Introduction() {
 const Wrapper = styled.ul`
 	display: flex;
 	flex-direction: column;
-	gap: 2.75rem;
+	gap: 3.5rem;
+	margin: 2rem 0;
 	padding: 1.5rem 0.5rem;
 	width: 100%;
 	li {

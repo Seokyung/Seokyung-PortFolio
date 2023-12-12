@@ -5,7 +5,7 @@ import seokyung_logo from "../assets/img/seokyung_logo.png";
 
 function AboutMe() {
 	const renderInfos = () => {
-		return skg_info.slice(2, 5).map((item) => {
+		return skg_info.slice(2, 6).map((item) => {
 			return (
 				<InfoBox key={item.id}>
 					<span>{item.title}</span>
@@ -17,7 +17,7 @@ function AboutMe() {
 
 	return (
 		<SectionWrapper $height="auto" $background="#111">
-			<div>
+			<Wrapper>
 				<Title>FE Developer Seokyung</Title>
 				<Card>
 					<Logo>
@@ -32,10 +32,14 @@ function AboutMe() {
 						{renderInfos()}
 					</InfoWrapper>
 				</Card>
-			</div>
+			</Wrapper>
 		</SectionWrapper>
 	);
 }
+
+const Wrapper = styled.div`
+	margin: 4rem 0;
+`;
 
 const Title = styled.h1`
 	margin-bottom: 0.5rem;
@@ -98,7 +102,7 @@ const NameBox = styled.div`
 		font-size: 1.125rem;
 		font-weight: 500;
 		text-align: center;
-		word-spacing: 0.75rem;
+		word-spacing: 0.5rem;
 		text-transform: capitalize;
 	}
 	hr {
@@ -113,10 +117,10 @@ const NameBox = styled.div`
 const InfoBox = styled.div`
 	display: flex;
 	justify-content: space-between;
-	gap: 1.25rem;
+	gap: 1.5rem;
 	h2 {
 		color: var(--font-color-secondary);
-		font-size: 1.5rem;
+		font-size: 1.25rem;
 		font-weight: 700;
 	}
 	span {
