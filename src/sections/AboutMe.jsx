@@ -44,9 +44,9 @@ const Wrapper = styled.div`
 const Title = styled.h1`
 	margin-bottom: 0.5rem;
 	padding: 0.5rem;
-	color: #f8f8f8;
+	color: var(--font-color-light);
 	font-family: var(--font-family-eng-title);
-	font-size: calc(2rem + 0.75vw);
+	font-size: var(--font-size-title);
 	font-weight: 600;
 	line-height: 2.75rem;
 	text-align: right;
@@ -63,7 +63,7 @@ const Card = styled.div`
 	min-height: 380px;
 	gap: 4rem;
 	padding: 1.5rem 2rem;
-	background-color: #f8f8f8;
+	background-color: var(--bg-color-light);
 	border-radius: 20px;
 `;
 

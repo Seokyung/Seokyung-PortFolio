@@ -71,73 +71,125 @@ function Project() {
 		return skg_projects.map((item) => {
 			return (
 				<ProjectBox key={item.id}>
-					<h2>{item.name}</h2>
-					<span>{item.title}</span>
-					<span>{item.sector}</span>
-					<span>{item.role}</span>
-					<span>{item.period}</span>
-					<ContentBox>
-						<h4>Descriptions</h4>
-						<ul>
-							{item.descriptions.map((el, idx) => {
-								return <li key={idx}>{el}</li>;
-							})}
-						</ul>
-					</ContentBox>
-					<ContentBox>
-						<h4>What Did I Do</h4>
-						<ul>
-							{item.works.map((el, idx) => {
-								return <li key={idx}>{el}</li>;
-							})}
-						</ul>
-					</ContentBox>
-					<ContentBox>
-						<h4>Links</h4>
-						<ul>
-							{item.links.map((el, idx) => {
-								return (
-									<li key={idx}>
-										<a href={el} target="_blank" rel="noreferrer">
-											{el}
-										</a>
-									</li>
-								);
-							})}
-						</ul>
-					</ContentBox>
+					<div>
+						<h2>{item.name}</h2>
+						<span className="title">{item.title}</span>
+						<hr />
+						<span className="sector">{item.sector}</span>
+						<span className="role">{item.role}</span>
+						<span className="period">{item.period}</span>
+					</div>
+					<div>
+						<ContentBox>
+							<h4>Descriptions</h4>
+							<ul>
+								{item.descriptions.map((el, idx) => {
+									return <li key={idx}>{el}</li>;
+								})}
+							</ul>
+						</ContentBox>
+						<ContentBox>
+							<h4>What Did I Do</h4>
+							<ul>
+								{item.works.map((el, idx) => {
+									return <li key={idx}>{el}</li>;
+								})}
+							</ul>
+						</ContentBox>
+						<ContentBox>
+							<h4>Links</h4>
+							<ul>
+								{item.links.map((el, idx) => {
+									return (
+										<li key={idx}>
+											<a href={el} target="_blank" rel="noreferrer">
+												{el}
+											</a>
+										</li>
+									);
+								})}
+							</ul>
+						</ContentBox>
+					</div>
 				</ProjectBox>
 			);
 		});
 	};
 
 	return (
-		<SectionWrapper $background="#786fa6">
-			<h1>Project</h1>
-			<Wrapper>{renderProjects()}</Wrapper>
+		<SectionWrapper>
+			<Wrapper>
+				<h1>Projects</h1>
+				<div>{renderProjects()}</div>
+			</Wrapper>
 		</SectionWrapper>
 	);
 }
 
 const Wrapper = styled.div`
-	margin: 1rem 0;
+	width: 100%;
+	max-width: 1000px;
+	margin: 2rem 0;
+	h1 {
+		margin-bottom: 0.5rem;
+		padding: 0.5rem;
+		color: var(--font-color-primary);
+		font-family: var(--font-family-eng-title);
+		font-size: var(--font-size-title);
+		line-height: 2.75rem;
+	}
+	> div {
+		display: flex;
+		flex-direction: column;
+		gap: 5rem;
+	}
 `;
 
 const ProjectBox = styled.div`
 	display: flex;
-	flex-direction: column;
-	padding: 0.5rem;
-	background-color: #fff;
-	h2 {
-		font-weight: 700;
+	padding: 2rem;
+	gap: 1.5rem;
+	/* background-color: var(--bg-color-secondary); */
+	background-color: #cc6c1c;
+	border-radius: 20px;
+	div {
+		display: flex;
+		flex-direction: column;
 	}
-	> span {
-		padding: 0.25rem 0;
+	h2 {
+		margin-bottom: 0.5rem;
+		color: var(--bg-color-light);
+		font-family: var(--font-family-eng-card-title);
+		font-size: var(--font-size-title-lg);
+		line-height: 3rem;
+		word-break: break-all;
+	}
+	.title {
+		margin: 0.5rem 0;
+		color: #111;
+		font-size: 1.125rem;
+		font-weight: 600;
+		line-height: 1.375rem;
+		word-spacing: 1.5px;
+	}
+	.sector,
+	.role,
+	.period {
+		margin: 0.5rem 0;
+		color: #222;
+		font-family: var(--font-family-eng);
+		font-size: 1.125rem;
+		line-height: 1.25rem;
+	}
+	hr {
+		width: 100%;
+		height: 1px;
+		background-color: #333;
 	}
 `;
 
 const ContentBox = styled.div`
-	margin: 0.25rem;
+	margin: 0.25rem 0;
 	padding: 0.25rem;
 	background-color: #ddd;
 	h4 {

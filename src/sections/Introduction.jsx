@@ -66,7 +66,7 @@ const Wrapper = styled.ul`
 		font-weight: 700;
 		line-height: 2rem;
 		word-break: keep-all;
-		background-color: #f8f8f8;
+		background-color: var(--bg-color-light);
 		border-radius: 15px;
 		/* &::before {
 			content: "";

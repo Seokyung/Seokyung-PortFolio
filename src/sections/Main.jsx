@@ -30,7 +30,7 @@ const Wrapper = styled.div`
 	width: 100%;
 	height: 100%;
 	padding: 2.5rem 1.5rem;
-	background-color: #f8f8f8;
+	background-color: var(--bg-color-light);
 	border-radius: 20px;
 	@media (max-width: 768px) {
 		flex-direction: column;
