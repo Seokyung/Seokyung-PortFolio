@@ -39,42 +39,71 @@ function Activity() {
 		return skg_activities
 			.filter((el) => el.sector === sector)
 			.map((item) => {
-				return (
-					<ActivityBox key={item.id}>
-						<span>{item.title}</span>
-					</ActivityBox>
-				);
+				return <span key={item.id}>{item.title}</span>;
 			});
 	};
 
 	return (
-		<SectionWrapper $background="#596275">
-			<h1>Activity</h1>
+		<SectionWrapper $height="auto" $background="#111">
 			<Wrapper>
-				<h2>Awards</h2>
-				{renderActivities("award")}
-			</Wrapper>
-			<Wrapper>
-				<h2>Certificates</h2>
-				{renderActivities("certificate")}
-			</Wrapper>
-			<Wrapper>
-				<h2>ETC</h2>
-				{renderActivities("etc")}
+				<h1>Activity</h1>
+				<div>
+					<Container>
+						<h2>Awards</h2>
+						<ActivityBox>{renderActivities("award")}</ActivityBox>
+					</Container>
+					<Container>
+						<h2>Certificates</h2>
+						<ActivityBox>{renderActivities("certificate")}</ActivityBox>
+					</Container>
+					<Container>
+						<h2>ETC</h2>
+						<ActivityBox>{renderActivities("etc")}</ActivityBox>
+					</Container>
+				</div>
 			</Wrapper>
 		</SectionWrapper>
 	);
 }
 
 const Wrapper = styled.div`
-	margin: 1rem 0;
+	width: 100%;
+	/* max-width: 1200px; */
+	margin: 3rem 0;
+	h1 {
+		margin-bottom: 2rem;
+		color: var(--font-color-light);
+		font-size: var(--font-size-title-lg);
+		font-family: var(--font-family-eng-title);
+	}
+	> div {
+		display: flex;
+		flex-direction: column;
+		gap: 3rem;
+	}
+`;
+
+const Container = styled.div`
+	h2 {
+		margin-bottom: 0.75rem;
+		padding-left: 0.25rem;
+		color: #999;
+		font-size: var(--font-size-lg);
+		font-family: var(--font-family-eng);
+		font-weight: 500;
+	}
 `;
 
 const ActivityBox = styled.div`
-	padding: 0.5rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+	padding: 1rem 1.5rem;
 	background-color: #fff;
-	h3 {
-		text-transform: capitalize;
+	border-radius: 10px;
+	span {
+		font-size: var(--font-size-md);
+		line-height: 1.5rem;
 	}
 `;
 

@@ -14,6 +14,8 @@ ${reset}
   --font-color-secondary: #333;
   --font-color-light: #f8f8f8;
   --font-size-default: 1rem;
+  --font-size-md: 1.25rem;
+  --font-size-lg: 1.75rem;
   --font-size-title: calc(2rem + 0.75vw);
   --font-size-title-lg: calc(2.5rem + 0.75vw);
 
