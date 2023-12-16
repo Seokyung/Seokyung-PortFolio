@@ -80,7 +80,7 @@ function Project() {
 							<span className="role">{item.role}</span>
 							<span className="period">{item.period}</span>
 						</div>
-						<div>
+						<div className="contents-info">
 							<ContentBox>
 								<h4>Descriptions</h4>
 								<ul>
@@ -112,7 +112,9 @@ function Project() {
 								</ul>
 							</ContentBox>
 						</div>
-						<div className="modal"></div>
+						<div className="modal">
+							<span>프로젝트 화면</span>
+						</div>
 					</div>
 				</ProjectBox>
 			);
@@ -131,7 +133,7 @@ function Project() {
 
 const Wrapper = styled.div`
 	width: 100%;
-	max-width: 1000px;
+	/* max-width: 1000px; */
 	margin: 1rem 0;
 	h1 {
 		margin-bottom: 2rem;
@@ -154,12 +156,12 @@ const ProjectBox = styled.div`
 	display: flex;
 	flex-direction: column;
 	padding: 2rem;
+	width: 100%;
 	/* background-color: var(--bg-color-secondary); */
 	background-color: #cc6c1c;
 	border-radius: 20px;
-
 	h2 {
-		margin-bottom: 1rem;
+		margin-bottom: 0.5rem;
 		color: var(--bg-color-light);
 		font-family: var(--font-family-eng-card-title);
 		font-size: var(--font-size-title-lg);
@@ -170,10 +172,14 @@ const ProjectBox = styled.div`
 		flex: 1;
 		display: flex;
 		gap: 1.5rem;
+		padding: 0.5rem;
 		div {
 			flex: 1;
 			display: flex;
 			flex-direction: column;
+		}
+		.contents-info {
+			gap: 1rem;
 		}
 		.title {
 			margin: 0.5rem 0;
@@ -198,25 +204,40 @@ const ProjectBox = styled.div`
 			background-color: #333;
 		}
 		.modal {
+			display: flex;
+			justify-content: center;
+			align-items: center;
 			width: auto;
 			height: auto;
-			background-color: #999;
+			background-color: #555;
+			border-radius: 10px;
+			span {
+				color: #fff;
+			}
 		}
 	}
 `;
 
 const ContentBox = styled.div`
-	margin: 0.25rem 0;
-	padding: 0.25rem;
-	background-color: #ddd;
+	padding: 0.75rem;
+	background-color: var(--bg-color-light);
+	border-radius: 10px;
 	h4 {
-		font-weight: 600;
+		margin-bottom: 0.25rem;
+		font-size: 1rem;
+		font-weight: 700;
 	}
 	ul {
+		display: flex;
+		flex-direction: column;
+		gap: 0.25rem;
+		padding: 0.25rem 0;
+		padding-left: 1rem;
 		li {
-			padding: 0.25rem 0;
+			font-size: 1rem;
 			line-height: 1.25rem;
 			word-break: break-all;
+			list-style: disc;
 		}
 	}
 `;
