@@ -1,36 +1,48 @@
 import styled from "styled-components";
 import { SectionWrapper } from "../styles/SectionWrapper";
+import js_icon from "../assets/img/javascript_icon.png";
+import react_icon from "../assets/img/react_icon.png";
+import html_icon from "../assets/img/html_icon.png";
+import css_icon from "../assets/img/css_icon.png";
+import scss_icon from "../assets/img/scss_icon.png";
+import firebase_icon from "../assets/img/firebase_icon.png";
 
 const skg_skills = [
 	{
 		id: 1,
 		sector: "frontend",
 		skillName: "JavaScript",
+		icon: js_icon,
 	},
 	{
 		id: 2,
 		sector: "frontend",
 		skillName: "ReactJS",
+		icon: react_icon,
 	},
 	{
 		id: 3,
 		sector: "frontend",
 		skillName: "HTML",
+		icon: html_icon,
 	},
 	{
 		id: 4,
 		sector: "frontend",
 		skillName: "CSS",
+		icon: css_icon,
 	},
 	{
 		id: 5,
 		sector: "frontend",
 		skillName: "SCSS",
+		icon: scss_icon,
 	},
 	{
 		id: 6,
 		sector: "backend",
 		skillName: "Firebase",
+		icon: firebase_icon,
 	},
 ];
 
@@ -41,6 +53,7 @@ function Skills() {
 			.map((item) => {
 				return (
 					<SkillBox key={item.id}>
+						<img src={item.icon} alt="skill_icon" />
 						<span>{item.skillName}</span>
 					</SkillBox>
 				);
@@ -48,28 +61,77 @@ function Skills() {
 	};
 
 	return (
-		<SectionWrapper $background="#f3a683">
-			<h1>Skills</h1>
+		<SectionWrapper $height="auto">
 			<Wrapper>
-				<h2>Frontend</h2>
-				{renderSkills("frontend")}
-			</Wrapper>
-			<Wrapper>
-				<h2>Backend</h2>
-				{renderSkills("backend")}
+				<h1>Skills</h1>
+				<div>
+					<SectorBox>
+						<h2>Frontend</h2>
+						<div>{renderSkills("frontend")}</div>
+					</SectorBox>
+					<SectorBox>
+						<h2>Backend</h2>
+						<div>{renderSkills("backend")}</div>
+					</SectorBox>
+				</div>
 			</Wrapper>
 		</SectionWrapper>
 	);
 }
 
 const Wrapper = styled.div`
-	margin: 1rem 0;
+	/* width: 100%; */
+	margin: 1.5rem 0;
+	h1 {
+		font-family: var(--font-family-eng-title);
+		font-size: var(--font-size-title-lg);
+		color: var(--font-color-primary);
+	}
+	> div {
+		display: flex;
+		flex-direction: column;
+		gap: 2.5rem;
+		margin-top: 1rem;
+	}
+`;
+
+const SectorBox = styled.div`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	h2 {
+		margin-bottom: 0.75rem;
+		font-family: var(--font-family-eng);
+		font-size: var(--font-size-title);
+		color: var(--font-color-light);
+	}
+	> div {
+		width: 100%;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1rem;
+		padding: 1.75rem 1rem;
+		border: 1px solid #fff;
+		border-radius: 20px;
+	}
 `;
 
 const SkillBox = styled.div`
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	padding: 0.5rem;
-	background-color: #fff;
-	h3 {
+	img {
+		width: auto;
+		height: 200px;
+	}
+	span {
+		margin-top: 0.75rem;
+		font-family: var(--font-family-eng);
+		font-size: var(--font-size-lg);
+		font-weight: 500;
+		color: var(--font-color-light);
 		text-transform: capitalize;
 	}
 `;
