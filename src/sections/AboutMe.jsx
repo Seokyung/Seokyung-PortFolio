@@ -92,7 +92,7 @@ const NameBox = styled.div`
 	width: 100%;
 	h1 {
 		color: var(--font-color-primary);
-		font-family: var(--font-family-kor-title);
+		font-family: var(--font-family-kor-card-title);
 		font-size: 3.5rem;
 		/* font-weight: 700; */
 		text-align: center;

@@ -18,8 +18,8 @@ ${reset}
 :root {
   // font
   --font-family-kor: "Nanum Gothic";
-  --font-family-kor-title: "Bagel Fat One";
-  /* --font-family-kor-title: "NPSfontRegular"; */
+  --font-family-kor-title: "NPSfontRegular";
+  --font-family-kor-card-title: "Bagel Fat One";
   --font-family-eng: "Raleway";
   --font-family-eng-title: "Lobster";
   --font-family-eng-card-title: "Black Han Sans";
