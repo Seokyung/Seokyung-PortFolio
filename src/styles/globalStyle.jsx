@@ -3,10 +3,23 @@ import reset from "styled-reset";
 
 export const GlobalStyle = createGlobalStyle`
 ${reset}
+@font-face {
+    font-family: 'SOYOMapleBoldTTF';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/SOYOMapleBoldTTF.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NPSfontRegular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/NPSfontRegular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
 :root {
   // font
   --font-family-kor: "Nanum Gothic";
   --font-family-kor-title: "Bagel Fat One";
+  /* --font-family-kor-title: "NPSfontRegular"; */
   --font-family-eng: "Raleway";
   --font-family-eng-title: "Lobster";
   --font-family-eng-card-title: "Black Han Sans";

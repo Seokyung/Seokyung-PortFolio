@@ -1,20 +1,14 @@
 import styled from "styled-components";
-import seokyung_logo from "../assets/img/seokyung_logo.png";
 import { SectionWrapper } from "../styles/SectionWrapper";
 
 function Main() {
 	return (
 		<SectionWrapper>
 			<Wrapper>
-				<Logo>
-					<img src={seokyung_logo} alt="sk_logo" />
-				</Logo>
 				<Introduction>
 					<h2>안녕하세요!</h2>
 					<span>
-						꾸준히 성장하는 개발자
-						<br />
-						<span id="name">지서경</span>입니다.
+						꾸준히 성장하는 개발자 <span id="name">지서경</span>입니다.
 					</span>
 				</Introduction>
 			</Wrapper>
@@ -30,7 +24,7 @@ const Wrapper = styled.div`
 	width: 100%;
 	height: 100%;
 	padding: 2.5rem 1.5rem;
-	background-color: var(--bg-color-light);
+	/* background-color: var(--bg-color-light); */
 	border-radius: 20px;
 	@media (max-width: 768px) {
 		flex-direction: column;
@@ -38,39 +32,24 @@ const Wrapper = styled.div`
 	}
 `;
 
-const Logo = styled.div`
-	overflow: hidden;
-	padding: 1rem;
-	background-color: #f4d6ae;
-	border-radius: 50%;
-	box-shadow: 0 0 12px 3px rgba(0, 0, 0, 0.25);
-	img {
-		width: 100%;
-		max-width: 250px;
-		min-width: 120px;
-	}
-	@media (max-width: 768px) {
-		flex: none;
-	}
-`;
-
 const Introduction = styled.div`
 	h2,
 	span {
-		font-family: "Nanum Gothic", sans-serif;
+		font-family: "NPSfontRegular", sans-serif;
+		text-align: center;
 	}
 	h2 {
-		margin-bottom: 1.25rem;
-		color: var(--font-color-secondary);
+		color: var(--font-color-light);
 		font-size: 3rem;
 		font-weight: 800;
+		line-height: 4rem;
 	}
 	span {
+		color: var(--font-color-light);
 		font-size: 2rem;
 		font-weight: 700;
-		line-height: 2.75rem;
+		line-height: 3rem;
 		#name {
-			margin-right: 0.25rem;
 			color: var(--font-color-primary);
 			font-size: 2.25rem;
 			font-weight: 800;

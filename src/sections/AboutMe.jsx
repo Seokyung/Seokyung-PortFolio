@@ -94,6 +94,7 @@ const NameBox = styled.div`
 		color: var(--font-color-primary);
 		font-family: var(--font-family-kor-title);
 		font-size: 3.5rem;
+		/* font-weight: 700; */
 		text-align: center;
 	}
 	span {
@@ -102,7 +103,7 @@ const NameBox = styled.div`
 		font-size: 1.125rem;
 		font-weight: 500;
 		text-align: center;
-		word-spacing: 0.5rem;
+		word-spacing: 0.25rem;
 		text-transform: capitalize;
 	}
 	hr {
