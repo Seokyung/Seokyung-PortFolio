@@ -7,6 +7,7 @@ import Activity from "./sections/Activity";
 import Footer from "./components/Footer";
 import styled from "styled-components";
 import Introduction from "./sections/Introduction";
+import WorkExperience from "./sections/WorkExperience";
 
 function App() {
 	return (
@@ -16,6 +17,7 @@ function App() {
 				<Main />
 				<AboutMe />
 				<Introduction />
+				<WorkExperience />
 				<Project />
 				<Activity />
 				<Skills />
