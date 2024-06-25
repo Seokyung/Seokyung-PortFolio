@@ -28,7 +28,7 @@ const skg_work_experiences = [
 
 const WorkExperience = () => {
 	return (
-		<SectionWrapper>
+		<SectionWrapper id="work-experiences">
 			<Wrapper>
 				<h1>Work Experiences</h1>
 				<div>

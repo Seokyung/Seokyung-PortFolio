@@ -36,6 +36,9 @@ ${reset}
   --bg-color-primary: #333;
   --bg-color-secondary: #e6781e;
   --bg-color-light: #f8f8f8;
+
+  // navigation
+  --nav-height: 60px;
 }
   * {
     box-sizing: border-box;
@@ -46,6 +49,7 @@ ${reset}
     color: var(--font-color-secondary);
     font-family: var(--font-family-kor), sans-serif;
     background-color: var(--bg-color-primary);
+    margin-top: var(--nav-height);
   }
   a {
     outline: none;

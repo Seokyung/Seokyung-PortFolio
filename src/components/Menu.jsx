@@ -2,6 +2,11 @@ import styled from "styled-components";
 import seokyung_logo from "../assets/img/seokyung_logo.png";
 
 function Menu() {
+	const scrollToSection = (id) => {
+		const section = document.querySelector(`#${id}`);
+		window.scrollTo({ top: section.offsetTop - 60, behavior: "smooth" });
+	};
+
 	return (
 		<Wrapper>
 			<Logo href="/">
@@ -10,11 +15,14 @@ function Menu() {
 			</Logo>
 			<Navigation>
 				<ul>
-					<li>Main</li>
-					<li>About Me</li>
-					<li>Skills</li>
-					<li>Projects</li>
-					<li>Activities</li>
+					<li onClick={() => scrollToSection("main")}>Main</li>
+					<li onClick={() => scrollToSection("about-me")}>About Me</li>
+					<li onClick={() => scrollToSection("work-experiences")}>
+						Work Experiences
+					</li>
+					<li onClick={() => scrollToSection("projects")}>Projects</li>
+					<li onClick={() => scrollToSection("activities")}>Activities</li>
+					<li onClick={() => scrollToSection("skills")}>Skills</li>
 				</ul>
 			</Navigation>
 		</Wrapper>
@@ -59,9 +67,12 @@ const Navigation = styled.div`
 	ul {
 		display: flex;
 		flex-direction: row;
-		gap: 0.5rem;
+		gap: 0.75rem;
 		li {
+			cursor: pointer;
 			color: #fff;
+			font-size: 1rem;
+			letter-spacing: -0.45px;
 		}
 	}
 `;

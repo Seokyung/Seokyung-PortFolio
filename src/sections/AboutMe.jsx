@@ -16,7 +16,7 @@ function AboutMe() {
 	};
 
 	return (
-		<SectionWrapper $height="auto" $background="#111">
+		<SectionWrapper id="about-me" $height="auto" $background="#111">
 			<Wrapper>
 				<Title>FE Developer Seokyung</Title>
 				<Card>

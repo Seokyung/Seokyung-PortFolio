@@ -69,7 +69,7 @@ const skg_projects = [
 
 function Project() {
 	return (
-		<SectionWrapper>
+		<SectionWrapper id="projects">
 			<Wrapper>
 				<h1>Projects</h1>
 				<div>

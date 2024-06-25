@@ -27,10 +27,6 @@ function App() {
 	);
 }
 
-const AppWrapper = styled.div`
-	> div {
-		padding-top: 60px;
-	}
-`;
+const AppWrapper = styled.div``;
 
 export default App;

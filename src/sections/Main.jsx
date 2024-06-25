@@ -3,7 +3,7 @@ import { SectionWrapper } from "../styles/SectionWrapper";
 
 function Main() {
 	return (
-		<SectionWrapper>
+		<SectionWrapper id="main">
 			<Wrapper>
 				<div className="bg-icon bg-icon-left"></div>
 				<Introduction>
