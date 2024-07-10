@@ -16,6 +16,16 @@ ${reset}
     font-style: normal;
 }
 :root {
+  // color
+  --color-dark-orange: #c06016;
+  --color-light-orange: #d7b993;
+  --color-orange: #f28830;
+  --color-light-blue: #9ad3d4;
+  --color-dark-green: #436459;
+  --color-light-green: #637f69;
+  --color-dark-brown: #2d1105;
+  --color-light-brown: #3d3528;
+
   // font
   --font-family-kor: "Nanum Gothic";
   --font-family-kor-title: "NPSfontRegular";
@@ -23,9 +33,12 @@ ${reset}
   --font-family-eng: "Raleway";
   --font-family-eng-title: "Lobster";
   --font-family-eng-card-title: "Black Han Sans";
+
+  --font-color-default: #3e3e3e;
   --font-color-primary: #f28830;
   --font-color-secondary: #333;
   --font-color-light: #f8f8f8;
+
   --font-size-default: 1rem;
   --font-size-md: 1.25rem;
   --font-size-lg: 1.75rem;
@@ -33,6 +46,7 @@ ${reset}
   --font-size-title-lg: calc(2.5rem + 0.75vw);
 
   // background
+  --bg-color-default: #3d3528;
   --bg-color-primary: #333;
   --bg-color-secondary: #e6781e;
   --bg-color-light: #f8f8f8;
