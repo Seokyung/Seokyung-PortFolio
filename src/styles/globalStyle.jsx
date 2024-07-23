@@ -16,6 +16,9 @@ ${reset}
     font-style: normal;
 }
 :root {
+  // width
+  --max-width: 1400px;
+
   // color
   --color-dark-orange: #c06016;
   --color-light-orange: #d7b993;
@@ -40,6 +43,7 @@ ${reset}
   --font-color-light: #f8f8f8;
 
   --font-size-default: 1rem;
+  --font-size-sm: 0.9rem;
   --font-size-md: 1.25rem;
   --font-size-lg: 1.75rem;
   --font-size-title: calc(2rem + 0.75vw);
@@ -62,7 +66,7 @@ ${reset}
   body {
     color: var(--font-color-secondary);
     font-family: var(--font-family-kor), sans-serif;
-    background-color: var(--bg-color-primary);
+    background-color: var(--bg-color-default);
     margin-top: var(--nav-height);
   }
   a {

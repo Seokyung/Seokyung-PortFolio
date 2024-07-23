@@ -1,5 +1,8 @@
 import styled from "styled-components";
-import { SectionWrapper } from "../styles/SectionWrapper";
+import {
+	SectionWrapperInner,
+	SectionWrapperOuter,
+} from "../styles/SectionWrapper";
 import ProjectBox from "../components/ProjectBox";
 
 const skg_projects = [
@@ -69,16 +72,18 @@ const skg_projects = [
 
 function Project() {
 	return (
-		<SectionWrapper id="projects">
-			<Wrapper>
-				<h1>Projects</h1>
-				<div>
-					{skg_projects.map((item) => {
-						return <ProjectBox key={item.id} project={item} />;
-					})}
-				</div>
-			</Wrapper>
-		</SectionWrapper>
+		<SectionWrapperOuter id="projects">
+			<SectionWrapperInner>
+				<Wrapper>
+					<h1>Projects</h1>
+					<div>
+						{skg_projects.map((item) => {
+							return <ProjectBox key={item.id} project={item} />;
+						})}
+					</div>
+				</Wrapper>
+			</SectionWrapperInner>
+		</SectionWrapperOuter>
 	);
 }
 

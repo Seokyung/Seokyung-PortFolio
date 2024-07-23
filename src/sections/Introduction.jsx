@@ -1,5 +1,8 @@
 import styled from "styled-components";
-import { SectionWrapper } from "../styles/SectionWrapper";
+import {
+	SectionWrapperInner,
+	SectionWrapperOuter,
+} from "../styles/SectionWrapper";
 
 const skg_intro_texts = [
 	{
@@ -39,9 +42,11 @@ function Introduction() {
 		});
 	};
 	return (
-		<SectionWrapper $height="auto" $background="#111">
-			<Wrapper>{renderIntroTexts()}</Wrapper>
-		</SectionWrapper>
+		<SectionWrapperOuter $height="auto" $background="#111">
+			<SectionWrapperInner>
+				<Wrapper>{renderIntroTexts()}</Wrapper>
+			</SectionWrapperInner>
+		</SectionWrapperOuter>
 	);
 }
 

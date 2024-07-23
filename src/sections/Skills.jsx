@@ -1,5 +1,8 @@
 import styled from "styled-components";
-import { SectionWrapper } from "../styles/SectionWrapper";
+import {
+	SectionWrapperInner,
+	SectionWrapperOuter,
+} from "../styles/SectionWrapper";
 import js_icon from "../assets/img/javascript_icon.png";
 import react_icon from "../assets/img/react_icon.png";
 import html_icon from "../assets/img/html_icon.png";
@@ -61,21 +64,23 @@ function Skills() {
 	};
 
 	return (
-		<SectionWrapper id="skills" $height="auto">
-			<Wrapper>
-				<h1>Skills</h1>
-				<div>
-					<SectorBox>
-						<h2>Frontend</h2>
-						<div>{renderSkills("frontend")}</div>
-					</SectorBox>
-					<SectorBox>
-						<h2>Backend</h2>
-						<div>{renderSkills("backend")}</div>
-					</SectorBox>
-				</div>
-			</Wrapper>
-		</SectionWrapper>
+		<SectionWrapperOuter id="skills" $height="auto">
+			<SectionWrapperInner>
+				<Wrapper>
+					<h1>Skills</h1>
+					<div>
+						<SectorBox>
+							<h2>Frontend</h2>
+							<div>{renderSkills("frontend")}</div>
+						</SectorBox>
+						<SectorBox>
+							<h2>Backend</h2>
+							<div>{renderSkills("backend")}</div>
+						</SectorBox>
+					</div>
+				</Wrapper>
+			</SectionWrapperInner>
+		</SectionWrapperOuter>
 	);
 }
 

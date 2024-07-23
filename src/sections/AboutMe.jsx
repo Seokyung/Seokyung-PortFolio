@@ -1,5 +1,8 @@
 import styled from "styled-components";
-import { SectionWrapper } from "../styles/SectionWrapper";
+import {
+	SectionWrapperOuter,
+	SectionWrapperInner,
+} from "../styles/SectionWrapper";
 import { skg_info } from "../assets/skg_info";
 import seokyung_logo from "../assets/img/seokyung_logo.png";
 
@@ -16,24 +19,26 @@ function AboutMe() {
 	};
 
 	return (
-		<SectionWrapper id="about-me" $height="auto" $background="#111">
-			<Wrapper>
-				<Title>FE Developer Seokyung</Title>
-				<Card>
-					<Logo>
-						<img src={seokyung_logo} alt="sk_logo" />
-					</Logo>
-					<InfoWrapper>
-						<NameBox>
-							<span>{skg_info[1].content}</span>
-							<h1>{skg_info[0].content}</h1>
-							<hr />
-						</NameBox>
-						{renderInfos()}
-					</InfoWrapper>
-				</Card>
-			</Wrapper>
-		</SectionWrapper>
+		<SectionWrapperOuter id="about-me" $height="auto" $background="#111">
+			<SectionWrapperInner>
+				<Wrapper>
+					<Title>FE Developer Seokyung</Title>
+					<Card>
+						<Logo>
+							<img src={seokyung_logo} alt="sk_logo" />
+						</Logo>
+						<InfoWrapper>
+							<NameBox>
+								<span>{skg_info[1].content}</span>
+								<h1>{skg_info[0].content}</h1>
+								<hr />
+							</NameBox>
+							{renderInfos()}
+						</InfoWrapper>
+					</Card>
+				</Wrapper>
+			</SectionWrapperInner>
+		</SectionWrapperOuter>
 	);
 }
 

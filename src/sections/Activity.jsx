@@ -1,5 +1,8 @@
 import styled from "styled-components";
-import { SectionWrapper } from "../styles/SectionWrapper";
+import {
+	SectionWrapperInner,
+	SectionWrapperOuter,
+} from "../styles/SectionWrapper";
 
 const skg_activities = [
 	{
@@ -44,25 +47,27 @@ function Activity() {
 	};
 
 	return (
-		<SectionWrapper id="activities" $height="auto" $background="#111">
-			<Wrapper>
-				<h1>Activity</h1>
-				<div>
-					<Container>
-						<h2>Awards</h2>
-						<ActivityBox>{renderActivities("award")}</ActivityBox>
-					</Container>
-					<Container>
-						<h2>Certificates</h2>
-						<ActivityBox>{renderActivities("certificate")}</ActivityBox>
-					</Container>
-					<Container>
-						<h2>ETC</h2>
-						<ActivityBox>{renderActivities("etc")}</ActivityBox>
-					</Container>
-				</div>
-			</Wrapper>
-		</SectionWrapper>
+		<SectionWrapperOuter id="activities" $height="auto" $background="#111">
+			<SectionWrapperInner>
+				<Wrapper>
+					<h1>Activity</h1>
+					<div>
+						<Container>
+							<h2>Awards</h2>
+							<ActivityBox>{renderActivities("award")}</ActivityBox>
+						</Container>
+						<Container>
+							<h2>Certificates</h2>
+							<ActivityBox>{renderActivities("certificate")}</ActivityBox>
+						</Container>
+						<Container>
+							<h2>ETC</h2>
+							<ActivityBox>{renderActivities("etc")}</ActivityBox>
+						</Container>
+					</div>
+				</Wrapper>
+			</SectionWrapperInner>
+		</SectionWrapperOuter>
 	);
 }
 
