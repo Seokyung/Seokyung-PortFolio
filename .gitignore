@@ -23,5 +23,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# editor settings
+/.vscode
+
 # infos
 skg_info.jsx
