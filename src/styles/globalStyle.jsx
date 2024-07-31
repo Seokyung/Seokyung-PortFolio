@@ -1,5 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
+import MilkAndHoney from "../assets/fonts/MilkAndHoney.woff";
+import DukeCharming from "../assets/fonts/DukeCharming.woff";
 
 export const GlobalStyle = createGlobalStyle`
 ${reset}
@@ -15,6 +17,18 @@ ${reset}
     font-weight: 400;
     font-style: normal;
 }
+@font-face {
+    font-family: 'MilkAndHoney';
+    src: local('MilkAndHoney'), local('MilkAndHoney');
+    src: url(${MilkAndHoney}) format('woff');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'DukeCharming';
+    src: local('DukeCharming'), local('DukeCharming');
+    src: url(${DukeCharming}) format('woff');
+    font-style: normal;
+}
 :root {
   // width
   --max-width: 1400px;
@@ -26,8 +40,9 @@ ${reset}
   --color-light-blue: #9ad3d4;
   --color-dark-green: #436459;
   --color-light-green: #637f69;
-  --color-dark-brown: #2d1105;
+  --color-dark-brown: #2f1305;
   --color-light-brown: #3d3528;
+  --color-grey-brown: #585140;
 
   // font
   --font-family-kor: "Nanum Gothic";
@@ -39,7 +54,6 @@ ${reset}
 
   --font-color-default: #3e3e3e;
   --font-color-primary: #f28830;
-  --font-color-secondary: #333;
   --font-color-light: #f8f8f8;
 
   --font-size-default: 1rem;
@@ -50,13 +64,15 @@ ${reset}
   --font-size-title-lg: calc(2.5rem + 0.75vw);
 
   // background
-  --bg-color-default: #3d3528;
+  --bg-color-default: #585140;
   --bg-color-primary: #333;
   --bg-color-secondary: #e6781e;
   --bg-color-light: #f8f8f8;
 
   // navigation
   --nav-height: 60px;
+  --nav-height-mobile: 48px;
+  --nav-bg-color: #3d3528;
 }
   * {
     box-sizing: border-box;
@@ -64,10 +80,14 @@ ${reset}
     -moz-osx-font-smoothing: grayscale;
   }
   body {
-    color: var(--font-color-secondary);
+    margin-top: var(--nav-height);
+    color: var(--font-color-default);
     font-family: var(--font-family-kor), sans-serif;
     background-color: var(--bg-color-default);
-    margin-top: var(--nav-height);
+    word-break: keep-all;
+    @media all and (max-width: 768px) {
+      margin-top: var(--nav-height-mobile);
+		}
   }
   a {
     outline: none;
