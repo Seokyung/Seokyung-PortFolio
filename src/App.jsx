@@ -1,4 +1,4 @@
-import Navigation from "./components/Navigation";
+import Header from "./components/header/Header";
 import Main from "./sections/Main";
 import AboutMe from "./sections/AboutMe";
 import Skills from "./sections/Skills";
@@ -12,7 +12,7 @@ import WorkExperience from "./sections/WorkExperience";
 function App() {
 	return (
 		<AppWrapper>
-			<Navigation />
+			<Header />
 			<div>
 				<Main />
 				<AboutMe />

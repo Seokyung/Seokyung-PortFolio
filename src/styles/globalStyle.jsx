@@ -70,8 +70,8 @@ ${reset}
   --bg-color-light: #f8f8f8;
 
   // navigation
-  --nav-height: 60px;
-  --nav-height-mobile: 48px;
+  --nav-height: 56px;
+  --nav-height-mobile: 56px;
   --nav-bg-color: #3d3528;
 }
   * {
@@ -101,5 +101,45 @@ ${reset}
   }
   hr {
     border: none;
+  }
+
+  // animation
+  @keyframes openMenu {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @keyframes closeMenu {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  @keyframes fadeInMenu {
+    0% {
+      background-color: rgba(0,0,0,0);
+    }
+    50% {
+      background-color: rgba(0,0,0,0.25);
+    }
+    100% {
+      background-color: rgba(0,0,0,0.5);
+    }
+  }
+  @keyframes fadeOutMenu {
+    0% {
+      background-color: rgba(0,0,0,0.5);
+    }
+    50% {
+      background-color: rgba(0,0,0,0.25);
+    }
+    100% {
+      background-color: rgba(0,0,0,0);
+    }
   }
 `;
