@@ -78,7 +78,7 @@ const Logo = styled.a`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	gap: 0.45rem;
+	gap: 0.4rem;
 	img {
 		width: 32px;
 		height: auto;
@@ -86,7 +86,7 @@ const Logo = styled.a`
 	h1 {
 		flex: 1 1 auto;
 		color: var(--font-color-light);
-		font-size: 1.2rem;
+		font-size: 1.125rem;
 		font-weight: 600;
 		line-height: 1.5rem;
 		letter-spacing: 0.5px;

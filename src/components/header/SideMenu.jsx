@@ -29,7 +29,7 @@ function SideMenu({ isSideMenuOpen, setIsSideMenuOpen, scrollToSection }) {
 		<SideMenuOuter id="side-menu-outer" $isSideMenuOpen={isSideMenuOpen}>
 			<SideMenuInner id="side-menu-inner" $isSideMenuOpen={isSideMenuOpen}>
 				<SideMenuHeader>
-					<span>Menu</span>
+					<h5>Menu</h5>
 					<button onClick={closeMenu}>
 						<CloseIcon />
 					</button>
@@ -72,7 +72,7 @@ const SideMenuInner = styled.div`
 	display: ${(props) => (props.$isSideMenuOpen ? "block" : "none")};
 	width: 60%;
 	height: 100%;
-	padding: 1.25rem;
+	padding: 1.25rem 1.5rem;
 	background-color: var(--nav-bg-color);
 	@media all and (max-width: 480px) {
 		width: 80%;
@@ -83,11 +83,11 @@ const SideMenuHeader = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	span {
+	h5 {
 		color: var(--font-color-light);
 		font-family: var(--font-family-eng);
-		font-size: 1rem;
-		font-weight: 500;
+		font-size: 1.25rem;
+		font-weight: 600;
 		letter-spacing: -0.45px;
 	}
 	button {
@@ -109,19 +109,18 @@ const HorizonLine = styled.hr`
 `;
 
 const Nav = styled.div`
-	display: block;
-	margin: 1rem 0;
+	margin: 1.75rem 0;
 	ul {
 		display: flex;
 		flex-direction: column;
-		gap: 1rem;
+		gap: 1.25rem;
 	}
 	li {
 		cursor: pointer;
 		width: fit-content;
 		color: var(--font-color-light);
 		font-family: var(--font-family-eng);
-		font-size: 1rem;
+		font-size: 0.9rem;
 		line-height: 1.2rem;
 		letter-spacing: -0.45px;
 	}
