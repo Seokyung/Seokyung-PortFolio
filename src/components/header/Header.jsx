@@ -85,7 +85,7 @@ const Logo = styled.a`
 	}
 	h1 {
 		flex: 1 1 auto;
-		color: var(--font-color-light);
+		color: var(--font-color-default);
 		font-size: 1.125rem;
 		font-weight: 600;
 		line-height: 1.5rem;
@@ -109,7 +109,7 @@ const Nav = styled.div`
 	li {
 		cursor: pointer;
 		text-align: center;
-		color: var(--font-color-light);
+		color: var(--font-color-default);
 		font-family: var(--font-family-eng);
 		font-size: 0.9rem;
 		line-height: 1rem;
@@ -122,7 +122,7 @@ const MenuBtn = styled.button`
 	@media all and (max-width: 768px) {
 		display: flex;
 		align-items: center;
-		color: var(--font-color-light);
+		color: var(--btn-color-default);
 		svg {
 			width: 30px;
 			height: auto;

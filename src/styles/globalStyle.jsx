@@ -52,8 +52,9 @@ ${reset}
   --font-family-eng-title: "Lobster";
   --font-family-eng-card-title: "Black Han Sans";
 
-  --font-color-default: #3e3e3e;
+  --font-color-default: #f8f8f8;
   --font-color-primary: #f28830;
+  --font-color-secondary: #3e3e3e;
   --font-color-light: #f8f8f8;
 
   --font-size-default: 1rem;
@@ -73,6 +74,9 @@ ${reset}
   --nav-height: 56px;
   --nav-height-mobile: 56px;
   --nav-bg-color: #3d3528;
+
+  // button
+  --btn-color-default: #f8f8f8;
 }
   * {
     box-sizing: border-box;
