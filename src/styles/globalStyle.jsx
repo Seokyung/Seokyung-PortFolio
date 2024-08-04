@@ -107,8 +107,8 @@ ${reset}
     border: none;
   }
 
-  // animation
-  @keyframes slideLeft {
+  // header animation
+  @keyframes openMenu {
     0% {
       transform: translateX(100%);
     }
@@ -116,7 +116,7 @@ ${reset}
       transform: translateX(0);
     }
   }
-  @keyframes slideRight {
+  @keyframes closeMenu {
     0% {
       transform: translateX(0);
     }

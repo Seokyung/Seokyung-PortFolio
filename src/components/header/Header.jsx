@@ -17,7 +17,7 @@ function Header() {
 		sideMenuOuter.style.animation = "fadeInMenu 0.3s linear";
 
 		const sideMenuInner = document.querySelector("#side-menu-inner");
-		sideMenuInner.style.animation = "slideLeft 0.3s linear";
+		sideMenuInner.style.animation = "openMenu 0.3s linear";
 
 		document.body.style = "overflow: hidden";
 
