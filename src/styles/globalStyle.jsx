@@ -108,7 +108,7 @@ ${reset}
   }
 
   // animation
-  @keyframes openMenu {
+  @keyframes slideLeft {
     0% {
       transform: translateX(100%);
     }
@@ -116,7 +116,7 @@ ${reset}
       transform: translateX(0);
     }
   }
-  @keyframes closeMenu {
+  @keyframes slideRight {
     0% {
       transform: translateX(0);
     }

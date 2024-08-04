@@ -12,7 +12,7 @@ function SideMenu({ isSideMenuOpen, setIsSideMenuOpen, scrollToSection }) {
 		sideMenuOuter.style.animation = "fadeOutMenu 0.3s linear";
 
 		const sideMenuInner = document.querySelector("#side-menu-inner");
-		sideMenuInner.style.animation = "closeMenu 0.3s linear";
+		sideMenuInner.style.animation = "slideRight 0.3s linear";
 
 		const timeout = setTimeout(() => {
 			setIsSideMenuOpen(false);
