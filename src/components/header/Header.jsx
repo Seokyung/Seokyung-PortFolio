@@ -9,7 +9,7 @@ function Header() {
 
 	const scrollToSection = (id) => {
 		const section = document.querySelector(`#${id}`);
-		window.scrollTo({ top: section.offsetTop - 56, behavior: "smooth" });
+		window.scrollTo({ top: section.offsetTop - 52, behavior: "smooth" });
 	};
 
 	const openMenu = () => {
@@ -80,13 +80,13 @@ const Logo = styled.a`
 	align-items: center;
 	gap: 0.4rem;
 	img {
-		width: 32px;
+		width: 30px;
 		height: auto;
 	}
 	h1 {
 		flex: 1 1 auto;
 		color: var(--font-color-default);
-		font-size: 1.125rem;
+		font-size: 1rem;
 		font-weight: 600;
 		line-height: 1.5rem;
 		letter-spacing: 0.5px;

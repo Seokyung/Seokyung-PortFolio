@@ -78,8 +78,8 @@ ${reset}
   --bg-color-light: #f8f8f8;
 
   // navigation
-  --nav-height: 56px;
-  --nav-height-mobile: 56px;
+  --nav-height: 52px;
+  --nav-height-mobile: 52px;
   --nav-bg-color: #3d3528;
 
   // button
@@ -186,15 +186,15 @@ ${reset}
 @keyframes appearFromBottom {
   0% {
     opacity: 0;
-    transform: translateY(100%);
+    transform: translateY(50%);
   }
   50% {
     opacity: 0.5;
-    transform: translateY(50%);
+    transform: translateY(25%);
   }
   75% {
     opacity: 0.75;
-    transform: translateY(25%);
+    transform: translateY(10%);
   }
   100% {
     opacity: 1;
