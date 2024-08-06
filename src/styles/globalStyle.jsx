@@ -2,6 +2,7 @@ import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
 import MilkAndHoney from "../assets/fonts/MilkAndHoney.woff";
 import DukeCharming from "../assets/fonts/DukeCharming.woff";
+import VitroCore from "../assets/fonts/VitroCore.woff";
 
 export const GlobalStyle = createGlobalStyle`
 ${reset}
@@ -29,9 +30,15 @@ ${reset}
     src: url(${DukeCharming}) format('woff');
     font-style: normal;
 }
+@font-face {
+    font-family: 'VitroCore';
+    src: local('VitroCore'), local('VitroCore');
+    src: url(${VitroCore}) format('woff');
+    font-style: normal;
+}
 :root {
   // width
-  --max-width: 1400px;
+  --max-width: 1200px;
 
   // color
   --color-dark-orange: #c06016;
@@ -146,4 +153,52 @@ ${reset}
       background-color: rgba(0,0,0,0);
     }
   }
+
+// main animation
+@keyframes slideLeft {
+  0% {
+    left: 50%;
+  }
+  50% {
+    left: 25%;
+  }
+  75% {
+    left: 15%;
+  }
+  100% {
+    left: 10%;
+  }
+}
+@keyframes slideRight {
+  0% {
+    right: 50%;
+  }
+  50% {
+    right: 25%;
+  }
+  75% {
+    right: 10%;
+  }
+  100% {
+    right: 10%;
+  }
+}
+@keyframes appearFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(50%);
+  }
+  75% {
+    opacity: 0.75;
+    transform: translateY(25%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 `;

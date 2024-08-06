@@ -53,7 +53,7 @@ function SideMenu({ isSideMenuOpen, setIsSideMenuOpen, scrollToSection }) {
 }
 
 const SideMenuOuter = styled.div`
-	z-index: 2;
+	z-index: 100;
 	position: fixed;
 	top: 0;
 	left: 0;

@@ -57,7 +57,7 @@ function Header() {
 }
 
 const HeaderWrapper = styled.header`
-	z-index: 1;
+	z-index: 100;
 	position: fixed;
 	top: 0;
 	left: 0;

@@ -9,18 +9,19 @@ function Main() {
 		<SectionWrapperOuter id="main" $background="var(--color-light-green)">
 			<SectionWrapperInner>
 				<Wrapper>
-					<div className="bg-icon bg-icon-left"></div>
+					<DevIconLeft>
+						<span>{"<"}</span>
+					</DevIconLeft>
 					<Introduction>
-						{/* <h2>안녕하세요!</h2>
-					<span>
-						꾸준히 성장하는 개발자 <span id="name">지서경</span>입니다.
-					</span> */}
-						<h2>Nice to meet you!</h2>
-						<span>
-							I'm <span id="name">Anonymous</span>, your FE Developer.
-						</span>
+						<h1>안녕하세요!</h1>
+						{/* <h3>꾸준히 성장하는 개발자 지서경입니다.</h3> */}
+						<h3>
+							꾸준히 성장하는 개발자 <span id="name">지서경</span>입니다.
+						</h3>
 					</Introduction>
-					<div className="bg-icon bg-icon-right"></div>
+					<DevIconRight>
+						<span>{"/>"}</span>
+					</DevIconRight>
 				</Wrapper>
 			</SectionWrapperInner>
 		</SectionWrapperOuter>
@@ -28,62 +29,67 @@ function Main() {
 }
 
 const Wrapper = styled.div`
+	position: relative;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	width: 100%;
 	height: 100%;
-	padding: 2.5rem 1.5rem;
-	/* background-color: var(--bg-color-light); */
-	border-radius: 20px;
-	.bg-icon {
-		&::before {
-			display: block;
-			position: relative;
-			color: var(--font-color-default);
-			font-family: var(--font-family-eng-title);
-			font-size: 8rem;
-		}
-		&-left {
-			&::before {
-				content: "<";
-				right: 1.25rem;
-				/* background-color: pink; */
-			}
-		}
-		&-right {
-			&::before {
-				content: "/>";
-				left: 1.25rem;
-				/* background-color: skyblue; */
-			}
-		}
-	}
 	@media (max-width: 768px) {
 		flex-direction: column;
 	}
 `;
 
-const Introduction = styled.div`
-	h2,
+const DevIcon = styled.div`
+	z-index: 0;
+	position: absolute;
+	animation-duration: 0.8s;
+	animation-timing-function: linear;
+	@media (max-width: 768px) {
+		animation-duration: 0.5s;
+	}
 	span {
-		font-family: var(--font-family-kor-title);
+		color: #4d4c49;
+		font-size: 180px;
+		font-family: "Elice Digital Coding";
+		font-weight: 600;
+		letter-spacing: -20px;
+	}
+`;
+const DevIconLeft = styled(DevIcon)`
+	left: 10%;
+	/* transform: translateX(-50%); */
+	animation-name: slideLeft;
+`;
+const DevIconRight = styled(DevIcon)`
+	right: 10%;
+	/* transform: translateX(50%); */
+	animation-name: slideRight;
+`;
+
+const Introduction = styled.div`
+	z-index: 1;
+	animation: appearFromBottom 1s linear;
+	h1,
+	h3 {
+		font-family: "VitroCore";
 		color: var(--font-color-light);
 		text-align: center;
 	}
-	h2 {
-		font-size: 3rem;
-		font-weight: 800;
-		line-height: 4rem;
+	h1 {
+		margin-bottom: 0.45rem;
+		font-size: 2.35rem;
+		line-height: 2.75rem;
+		letter-spacing: 1.5px;
 	}
-	span {
+	h3 {
 		font-size: 2rem;
-		font-weight: 700;
-		line-height: 3rem;
+		line-height: 2.5rem;
+		letter-spacing: 0;
 		#name {
 			color: var(--color-dark-orange);
-			font-size: 2.25rem;
-			font-weight: 800;
+			font-size: inherit;
+			margin-right: 0.15rem;
 		}
 	}
 	@media (max-width: 768px) {
