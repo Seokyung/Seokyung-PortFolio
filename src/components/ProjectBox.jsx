@@ -74,6 +74,9 @@ const Box = styled.div`
 		display: flex;
 		gap: 1.5rem;
 		padding: 0.5rem;
+		@media (max-width: 768px) {
+			flex-direction: column;
+		}
 		div {
 			flex: 1;
 			display: flex;
