@@ -118,6 +118,9 @@ const SectorBox = styled.div`
 		padding: 1.75rem 1rem;
 		border: 1px solid #fff;
 		border-radius: 20px;
+		@media (max-width: 768px) {
+			grid-template-columns: repeat(1, 1fr);
+		}
 	}
 `;
 

@@ -6,6 +6,7 @@ export const SectionWrapperOuter = styled.div`
 	justify-content: center;
 	align-items: center;
 	width: 100%;
+	height: 100%;
 	min-height: ${(props) => props.$height || "calc(100vh - var(--nav-height))"};
 	padding: 1rem 1.5rem;
 	background-color: ${(props) =>

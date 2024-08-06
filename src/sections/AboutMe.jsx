@@ -63,7 +63,7 @@ const Card = styled.div`
 	justify-content: center;
 	align-items: center;
 	width: 100%;
-	min-width: 750px;
+	/* min-width: 750px; */
 	height: 100%;
 	min-height: 380px;
 	gap: 4rem;
