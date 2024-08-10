@@ -177,7 +177,7 @@ ${reset}
     right: 25%;
   }
   75% {
-    right: 10%;
+    right: 15%;
   }
   100% {
     right: 10%;
