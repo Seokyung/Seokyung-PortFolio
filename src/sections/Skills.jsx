@@ -131,8 +131,9 @@ const SkillBox = styled.div`
 	align-items: center;
 	padding: 0.5rem;
 	img {
-		width: auto;
-		height: 200px;
+		width: 100%;
+		max-width: 200px;
+		height: auto;
 	}
 	span {
 		margin-top: 0.75rem;
