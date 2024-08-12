@@ -3,7 +3,7 @@ import {
 	SectionWrapperInner,
 	SectionWrapperOuter,
 } from "../styles/SectionWrapper";
-import ProjectBox from "../components/ProjectBox";
+import ProjectBox from "../components/box/ProjectBox";
 
 const skg_projects = [
 	{
