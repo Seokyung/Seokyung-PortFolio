@@ -43,8 +43,8 @@ ${reset}
   // color
   --color-dark-orange: #c06016;
   --color-light-orange: #d7b993;
-  --color-orange: #f28830;
-  --color-light-blue: #9ad3d4;
+  --color-orange: #e6781e;
+  --color-light-blue: #6c847c;
   --color-dark-green: #436459;
   --color-light-green: #637f69;
   --color-dark-brown: #2f1305;
@@ -53,14 +53,14 @@ ${reset}
 
   // font
   --font-family-kor: "Nanum Gothic";
-  --font-family-kor-title: "NPSfontRegular";
+  --font-family-kor-title: "VitroCore";
   --font-family-kor-card-title: "Bagel Fat One";
   --font-family-eng: "Raleway";
-  --font-family-eng-title: "Lobster";
-  --font-family-eng-card-title: "Black Han Sans";
+  --font-family-eng-title: "Black Han Sans";
+  --font-family-eng-card-title: "DukeCharming";
 
   --font-color-default: #f8f8f8;
-  --font-color-primary: #f28830;
+  --font-color-primary: #e6781e;
   --font-color-secondary: #3e3e3e;
   --font-color-light: #f8f8f8;
 
@@ -163,10 +163,10 @@ ${reset}
     left: 25%;
   }
   75% {
-    left: 15%;
+    left: 10%;
   }
   100% {
-    left: 10%;
+    left: 0;
   }
 }
 @keyframes slideRight {
@@ -177,10 +177,10 @@ ${reset}
     right: 25%;
   }
   75% {
-    right: 15%;
+    right: 10%;
   }
   100% {
-    right: 10%;
+    right: 0;
   }
 }
 @keyframes appearFromBottom {

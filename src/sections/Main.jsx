@@ -13,10 +13,10 @@ function Main() {
 						<span>{"<"}</span>
 					</DevIconLeft>
 					<Introduction>
-						<h1>안녕하세요!</h1>
-						<h3>
+						<h3>안녕하세요!</h3>
+						<h1>
 							꾸준히 성장하는 개발자 <span id="name">지서경</span>입니다.
-						</h3>
+						</h1>
 					</Introduction>
 					<DevIconRight>
 						<span>{"/>"}</span>
@@ -36,7 +36,6 @@ const Wrapper = styled.div`
 	height: 100%;
 	@media (max-width: 768px) {
 		flex-direction: column;
-		/* min-height: calc(100vh - var(--nav-height)); */
 	}
 `;
 
@@ -49,31 +48,31 @@ const DevIcon = styled.div`
 		animation-duration: 0.5s;
 	}
 	span {
-		color: #4d4c49;
+		color: #4e544e;
 		font-family: "Elice Digital Coding";
-		font-size: 150px;
+		font-size: 180px;
 		font-weight: 600;
-		letter-spacing: -20px;
+		letter-spacing: -24px;
 		@media (max-width: 768px) {
-			font-size: 110px;
-			letter-spacing: -15px;
+			font-size: 150px;
+			letter-spacing: -20px;
 		}
 	}
 `;
 const DevIconLeft = styled(DevIcon)`
-	left: 10%;
+	left: 0;
 	animation-name: slideLeft;
 	@media (max-width: 768px) {
 		top: -50%;
-		transform: translateY(-5%);
+		transform: translateY(5%);
 	}
 `;
 const DevIconRight = styled(DevIcon)`
-	right: 10%;
+	right: 0;
 	animation-name: slideRight;
 	@media (max-width: 768px) {
 		bottom: -50%;
-		transform: translateY(20%);
+		transform: translateY(15%);
 	}
 `;
 
@@ -85,24 +84,24 @@ const Introduction = styled.div`
 	}
 	h1,
 	h3 {
-		font-family: "VitroCore";
+		font-family: var(--font-family-kor-title);
 		color: var(--font-color-light);
 		text-align: center;
 	}
-	h1 {
-		margin-bottom: 0.3rem;
-		font-size: 1.9rem;
-		line-height: normal;
-		letter-spacing: 1.5px;
-	}
 	h3 {
-		font-size: 1.5rem;
-		line-height: 2rem;
-		letter-spacing: 0.25px;
+		margin-bottom: 0.65rem;
+		font-size: 1.75rem;
+		letter-spacing: 1px;
+	}
+	h1 {
+		font-size: 2.25rem;
+		line-height: 2.85rem;
+		letter-spacing: 0.5px;
 		#name {
 			color: var(--color-dark-orange);
-			font-size: inherit;
-			margin-right: 0.15rem;
+			font-size: 2.5rem;
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+			margin-right: 0.25rem;
 		}
 	}
 `;
