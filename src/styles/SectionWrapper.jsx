@@ -16,6 +16,9 @@ export const SectionWrapperOuter = styled.div`
 export const SectionWrapperInner = styled.div`
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	flex-wrap: wrap;
 	width: 100%;
 	max-width: var(--max-width);
 	height: 100%;

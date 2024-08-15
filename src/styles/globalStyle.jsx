@@ -57,7 +57,7 @@ ${reset}
   --font-family-kor-card-title: "Bagel Fat One";
   --font-family-eng: "Raleway";
   --font-family-eng-title: "Black Han Sans";
-  --font-family-eng-card-title: "DukeCharming";
+  --font-family-eng-card-title: "MilkAndHoney";
 
   --font-color-default: #f8f8f8;
   --font-color-primary: #e6781e;
@@ -73,7 +73,7 @@ ${reset}
 
   // background
   --bg-color-default: #585140;
-  --bg-color-primary: #333;
+  --bg-color-primary: #3e3e3e;
   --bg-color-secondary: #e6781e;
   --bg-color-light: #f8f8f8;
 
