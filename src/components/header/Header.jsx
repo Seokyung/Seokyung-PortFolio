@@ -2,7 +2,7 @@ import { useState } from "react";
 import SideMenu from "./SideMenu";
 import styled from "styled-components";
 import seokyung_logo from "../../assets/img/seokyung_logo.png";
-import { ReactComponent as MenuIcon } from "../../assets/img/menu_icon.svg";
+import { ReactComponent as MenuIcon } from "../../assets/svg/menu_icon.svg";
 
 function Header() {
 	const [isSideMenuOpen, setIsSideMenuOpen] = useState(false);

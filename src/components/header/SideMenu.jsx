@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ReactComponent as CloseIcon } from "../../assets/img/close_icon.svg";
+import { ReactComponent as CloseIcon } from "../../assets/svg/close_icon.svg";
 
 function SideMenu({ isSideMenuOpen, setIsSideMenuOpen, scrollToSection }) {
 	const onSectionClick = (id) => {
