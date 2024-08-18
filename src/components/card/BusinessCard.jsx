@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { skg_info } from "../../assets/skg_info";
+import { skg_info } from "../../assets/skg_infos";
 import seokyung_logo from "../../assets/img/seokyung_logo.png";
 import { ReactComponent as PhoneIcon } from "../../assets/svg/phone_icon.svg";
 import { ReactComponent as EmailIcon } from "../../assets/svg/email_icon.svg";
