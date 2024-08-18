@@ -180,7 +180,7 @@ ${reset}
     right: 10%;
   }
   100% {
-    right: 0;
+    right: 2%;
   }
 }
 @keyframes appearFromBottom {

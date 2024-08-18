@@ -6,7 +6,11 @@ import {
 
 function Main() {
 	return (
-		<SectionWrapperOuter id="main" $background="var(--color-light-green)">
+		<SectionWrapperOuter
+			id="main"
+			$height="calc(100vh - var(--nav-height))"
+			$background="var(--color-light-green)"
+		>
 			<SectionWrapperInner>
 				<Wrapper>
 					<DevIconLeft>
@@ -36,6 +40,7 @@ const Wrapper = styled.div`
 	height: 100%;
 	@media (max-width: 768px) {
 		flex-direction: column;
+		margin-top: -10vh;
 	}
 `;
 
@@ -68,7 +73,7 @@ const DevIconLeft = styled(DevIcon)`
 	}
 `;
 const DevIconRight = styled(DevIcon)`
-	right: 0;
+	right: 2%;
 	animation-name: slideRight;
 	@media (max-width: 768px) {
 		bottom: -50%;

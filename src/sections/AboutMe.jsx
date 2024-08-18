@@ -7,11 +7,7 @@ import BusinessCard from "../components/card/BusinessCard";
 
 function AboutMe() {
 	return (
-		<SectionWrapperOuter
-			id="about-me"
-			$height="auto"
-			$background="var(--color-grey-brown)"
-		>
+		<SectionWrapperOuter id="about-me" $background="var(--color-grey-brown)">
 			<SectionWrapperInner>
 				<Wrapper>
 					<Title>FE Developer Seokyung</Title>

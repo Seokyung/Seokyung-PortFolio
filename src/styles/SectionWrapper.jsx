@@ -7,7 +7,7 @@ export const SectionWrapperOuter = styled.div`
 	align-items: center;
 	width: 100%;
 	height: 100%;
-	min-height: ${(props) => props.$height || "calc(100vh - var(--nav-height))"};
+	min-height: ${(props) => props.$height || "auto"};
 	padding: 1rem 1.5rem;
 	background-color: ${(props) =>
 		props.$background || "var(--bg-color-default)"};

@@ -47,7 +47,7 @@ function Activity() {
 	};
 
 	return (
-		<SectionWrapperOuter id="activities" $height="auto" $background="#111">
+		<SectionWrapperOuter id="activities" $background="#111">
 			<SectionWrapperInner>
 				<Wrapper>
 					<h1>Activity</h1>

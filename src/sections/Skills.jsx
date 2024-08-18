@@ -64,7 +64,7 @@ function Skills() {
 	};
 
 	return (
-		<SectionWrapperOuter id="skills" $height="auto">
+		<SectionWrapperOuter id="skills">
 			<SectionWrapperInner>
 				<Wrapper>
 					<h1>Skills</h1>

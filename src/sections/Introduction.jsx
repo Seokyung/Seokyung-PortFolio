@@ -42,7 +42,7 @@ function Introduction() {
 		});
 	};
 	return (
-		<SectionWrapperOuter $height="auto" $background="#111">
+		<SectionWrapperOuter $background="#111">
 			<SectionWrapperInner>
 				<Wrapper>{renderIntroTexts()}</Wrapper>
 			</SectionWrapperInner>
