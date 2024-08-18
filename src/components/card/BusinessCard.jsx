@@ -85,7 +85,8 @@ const Card = styled.div`
 	box-shadow: 0 0 20px 2px rgba(47, 19, 5, 0.5);
 	@media all and (max-width: 768px) {
 		flex-direction: column;
-		gap: 2rem;
+		gap: 0.75rem;
+		padding: 1.25rem 1rem;
 	}
 `;
 
@@ -98,14 +99,12 @@ const Logo = styled.div`
 		width: 100%;
 		max-width: 200px;
 		@media all and (max-width: 768px) {
-			max-width: 120px;
+			max-width: 140px;
 		}
 	}
 `;
 
 const InfoWrapper = styled.div`
-	/* display: flex;
-	flex-direction: column; */
 	width: 70%;
 	@media all and (max-width: 768px) {
 		width: 100%;
@@ -118,6 +117,7 @@ const InfoHeader = styled.div`
 	padding: 0 0.5rem;
 	@media all and (max-width: 768px) {
 		flex-direction: column;
+		gap: 0.625rem;
 	}
 `;
 
@@ -125,18 +125,27 @@ const InfoMain = styled.div`
 	display: flex;
 	flex-direction: column;
 	gap: 1.25rem;
+	padding: 0 0.25rem;
+	@media all and (max-width: 768px) {
+		gap: 0.75rem;
+	}
 `;
 
 const Divider = styled.hr`
 	width: 100%;
 	height: 0.75px;
-	margin: 1.25rem 0;
+	margin: 1rem 0 1.25rem 0;
 	background-color: #5e5e5e;
 	border: none;
+	@media all and (max-width: 768px) {
+		margin: 0.75rem 0 1rem 0;
+	}
 `;
 
 const NameBox = styled.div`
 	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
 	align-items: flex-end;
 	gap: 0.25rem;
 	width: 100%;
@@ -156,8 +165,11 @@ const NameBox = styled.div`
 
 const IconBox = styled.div`
 	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
 	align-items: flex-end;
 	gap: 0.5rem;
+	width: 100%;
 	svg {
 		color: var(--font-color-secondary);
 		width: 26px;
@@ -167,9 +179,15 @@ const IconBox = styled.div`
 
 const InfoBox = styled.div`
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
-	gap: 1.25rem;
+	gap: 1rem;
+	@media all and (max-width: 768px) {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0.25rem;
+	}
 	.title {
 		color: var(--font-color-primary);
 		font-family: var(--font-family-eng);
@@ -177,12 +195,14 @@ const InfoBox = styled.div`
 		font-weight: 500;
 		letter-spacing: -0.25px;
 		text-transform: capitalize;
+		text-align: left;
 	}
 	.content {
 		color: var(--font-color-secondary);
 		font-size: 1rem;
 		font-weight: 500;
 		letter-spacing: -0.25px;
+		line-height: 1.25rem;
 		word-spacing: -1px;
 	}
 `;

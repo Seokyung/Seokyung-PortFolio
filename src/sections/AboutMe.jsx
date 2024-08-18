@@ -27,6 +27,7 @@ const Wrapper = styled.div`
 	max-width: 800px;
 	margin: 4rem 0;
 	@media all and (max-width: 768px) {
+		max-width: 380px;
 		margin: 2rem 0;
 	}
 `;
@@ -38,10 +39,10 @@ const Title = styled.h3`
 	font-family: var(--font-family-eng-card-title);
 	font-size: 1.5rem;
 	font-weight: 700;
-	line-height: 1.75rem;
+	line-height: 1.5rem;
 	letter-spacing: -0.5px;
-	/* text-shadow: 0 0 3px #2f1305; */
 	@media all and (max-width: 768px) {
+		font-size: 1.25rem;
 		letter-spacing: -1.25px;
 	}
 `;

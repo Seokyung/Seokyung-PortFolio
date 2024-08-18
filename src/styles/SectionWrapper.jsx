@@ -11,6 +11,9 @@ export const SectionWrapperOuter = styled.div`
 	padding: 1rem 1.5rem;
 	background-color: ${(props) =>
 		props.$background || "var(--bg-color-default)"};
+	@media all and (max-width: 768px) {
+		padding: 1rem;
+	}
 `;
 
 export const SectionWrapperInner = styled.div`
@@ -22,7 +25,4 @@ export const SectionWrapperInner = styled.div`
 	width: 100%;
 	max-width: var(--max-width);
 	height: 100%;
-	/* @media all and (max-width: 768px) {
-		font-size: var(--font-size-sm);
-	} */
 `;
