@@ -31,10 +31,15 @@ function Introduction() {
 const Wrapper = styled.ul`
 	display: flex;
 	flex-direction: column;
-	gap: 2rem;
+	gap: 2.5rem;
 	margin: 2rem 0;
 	padding: 0 1rem;
 	width: 100%;
+	@media all and (max-width: 768px) {
+		gap: 2rem;
+		margin: 1rem 0;
+		padding: 0 0.5rem;
+	}
 `;
 
 const TalkBubble = styled.li`
@@ -46,6 +51,9 @@ const TalkBubble = styled.li`
 	padding: 1rem;
 	background-color: var(--bg-color-light);
 	border-radius: 10px;
+	@media all and (max-width: 768px) {
+		max-width: 92%;
+	}
 	&::after {
 		content: "";
 		position: absolute;
