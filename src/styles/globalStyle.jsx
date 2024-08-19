@@ -38,7 +38,7 @@ ${reset}
 }
 :root {
   // width
-  --max-width: 1200px;
+  --max-width: 1000px;
 
   // color
   --color-dark-orange: #c06016;
