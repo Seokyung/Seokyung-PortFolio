@@ -8,15 +8,19 @@ import { skg_intro_texts } from "../assets/skg_infos";
 function Introduction() {
 	const renderIntroTexts = () => {
 		return skg_intro_texts.map((item, idx) => {
-			return (
-				<li key={item.id} className={idx % 2 === 0 ? "left" : "right"}>
+			return idx % 2 === 0 ? (
+				<TalkBubbleLeft key={item.id}>
 					<span>{item.text}</span>
-				</li>
+				</TalkBubbleLeft>
+			) : (
+				<TalkBubbleRight key={item.id}>
+					<span>{item.text}</span>
+				</TalkBubbleRight>
 			);
 		});
 	};
 	return (
-		<SectionWrapperOuter $background="#111">
+		<SectionWrapperOuter $background="var(--color-light-blue)">
 			<SectionWrapperInner>
 				<Wrapper>{renderIntroTexts()}</Wrapper>
 			</SectionWrapperInner>
@@ -27,41 +31,54 @@ function Introduction() {
 const Wrapper = styled.ul`
 	display: flex;
 	flex-direction: column;
-	gap: 3.5rem;
-	/* margin: 2rem 0; */
-	padding: 1.5rem 0.5rem;
+	gap: 2rem;
+	margin: 2rem 0;
+	padding: 0 1rem;
 	width: 100%;
-	li {
-		z-index: 0;
-		position: relative;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: fit-content;
-		min-height: 70px;
-		padding: 1rem 1.25rem;
-		color: #111;
-		font-size: 1.25rem;
-		font-weight: 700;
-		line-height: 2rem;
-		word-break: keep-all;
-		background-color: var(--bg-color-light);
-		border-radius: 15px;
-		/* &::before {
-			content: "";
-			z-index: -1;
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			background-color: #888;
-			border-radius: 0 15px 15px 0;
-		} */
-		&.left {
-			align-self: flex-start;
-		}
-		&.right {
-			align-self: flex-end;
-		}
+`;
+
+const TalkBubble = styled.li`
+	z-index: 0;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem;
+	background-color: var(--bg-color-light);
+	border-radius: 10px;
+	&::after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		border-top: 10px solid transparent;
+		border-bottom: 10px solid transparent;
+	}
+	&:hover {
+		box-shadow: 0 0 20px 2px rgba(47, 19, 5, 0.3);
+	}
+	span {
+		font-family: "NPSfontRegular";
+		color: var(--font-color-secondary);
+		line-height: 1.25rem;
+	}
+`;
+
+const TalkBubbleLeft = styled(TalkBubble)`
+	align-self: flex-start;
+	&::after {
+		left: -10px;
+		border-left: 0 solid transparent;
+		border-right: 12px solid var(--bg-color-light);
+	}
+`;
+
+const TalkBubbleRight = styled(TalkBubble)`
+	align-self: flex-end;
+	&::after {
+		right: -10px;
+		border-left: 12px solid var(--bg-color-light);
+		border-right: 0 solid transparent;
 	}
 `;
 
