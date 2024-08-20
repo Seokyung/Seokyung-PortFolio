@@ -3,51 +3,7 @@ import {
 	SectionWrapperInner,
 	SectionWrapperOuter,
 } from "../styles/SectionWrapper";
-import js_icon from "../assets/img/javascript_icon.png";
-import react_icon from "../assets/img/react_icon.png";
-import html_icon from "../assets/img/html_icon.png";
-import css_icon from "../assets/img/css_icon.png";
-import scss_icon from "../assets/img/scss_icon.png";
-import firebase_icon from "../assets/img/firebase_icon.png";
-
-const skg_skills = [
-	{
-		id: 1,
-		sector: "frontend",
-		skillName: "JavaScript",
-		icon: js_icon,
-	},
-	{
-		id: 2,
-		sector: "frontend",
-		skillName: "ReactJS",
-		icon: react_icon,
-	},
-	{
-		id: 3,
-		sector: "frontend",
-		skillName: "HTML",
-		icon: html_icon,
-	},
-	{
-		id: 4,
-		sector: "frontend",
-		skillName: "CSS",
-		icon: css_icon,
-	},
-	{
-		id: 5,
-		sector: "frontend",
-		skillName: "SCSS",
-		icon: scss_icon,
-	},
-	{
-		id: 6,
-		sector: "backend",
-		skillName: "Firebase",
-		icon: firebase_icon,
-	},
-];
+import { skg_skills } from "../assets/skg_infos";
 
 function Skills() {
 	const renderSkills = (sector) => {
