@@ -42,13 +42,13 @@ ${reset}
 
   // color
   --color-dark-orange: #c06016;
-  --color-light-orange: #d7b993;
+  --color-light-orange: #c4986b;
   --color-orange: #e6781e;
   --color-light-blue: #6c847c;
-  --color-dark-green: #436459;
+  --color-dark-green: #43584e;
   --color-light-green: #637f69;
-  --color-dark-brown: #2f1305;
-  --color-light-brown: #3d3528;
+  --color-dark-brown: #372619;
+  --color-light-brown: #876f51;
   --color-grey-brown: #585140;
 
   // font
@@ -61,7 +61,7 @@ ${reset}
 
   --font-color-default: #f8f8f8;
   --font-color-primary: #e6781e;
-  --font-color-secondary: #3e3e3e;
+  --font-color-secondary: #120f06;
   --font-color-light: #f8f8f8;
 
   --font-size-default: 1rem;
@@ -96,6 +96,7 @@ ${reset}
     font-family: var(--font-family-kor), sans-serif;
     background-color: var(--bg-color-default);
     word-break: keep-all;
+    word-wrap: break-word;
     @media all and (max-width: 768px) {
       margin-top: var(--nav-height-mobile);
 		}
