@@ -113,6 +113,7 @@ ${reset}
   }
   hr {
     border: none;
+    background-color: #5e5e5e;
   }
 
   // header animation
