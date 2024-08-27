@@ -2,7 +2,7 @@ import styled from "styled-components";
 import {
 	SectionWrapperInner,
 	SectionWrapperOuter,
-} from "../styles/SectionWrapper";
+} from "../components/section/SectionWrapper";
 import { skg_work_experiences } from "../assets/skg_infos";
 import WorkBox from "../components/box/WorkBox";
 
@@ -27,7 +27,6 @@ const WorkExperience = () => {
 };
 
 const Wrapper = styled.div`
-	width: 100%;
 	margin: 2rem 0;
 	h1 {
 		margin: 0 0 0.25rem 0.5rem;

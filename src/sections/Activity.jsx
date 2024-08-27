@@ -2,7 +2,7 @@ import styled from "styled-components";
 import {
 	SectionWrapperInner,
 	SectionWrapperOuter,
-} from "../styles/SectionWrapper";
+} from "../components/section/SectionWrapper";
 
 const skg_activities = [
 	{

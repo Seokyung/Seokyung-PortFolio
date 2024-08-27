@@ -2,7 +2,7 @@ import styled from "styled-components";
 import {
 	SectionWrapperOuter,
 	SectionWrapperInner,
-} from "../styles/SectionWrapper";
+} from "../components/section/SectionWrapper";
 
 function Main() {
 	return (

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import {
 	SectionWrapperInner,
 	SectionWrapperOuter,
-} from "../styles/SectionWrapper";
+} from "../components/section/SectionWrapper";
 import { skg_skills } from "../assets/skg_infos";
 
 function Skills() {

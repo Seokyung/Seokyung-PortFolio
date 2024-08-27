@@ -2,7 +2,7 @@ import styled from "styled-components";
 import {
 	SectionWrapperInner,
 	SectionWrapperOuter,
-} from "../styles/SectionWrapper";
+} from "../components/section/SectionWrapper";
 import ProjectBox from "../components/box/ProjectBox";
 import { skg_projects } from "../assets/skg_infos";
 
