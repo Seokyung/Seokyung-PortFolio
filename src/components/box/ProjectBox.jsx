@@ -67,7 +67,7 @@ const Box = styled.div`
 		font-family: var(--font-family-eng-card-title);
 		font-size: var(--font-size-title-lg);
 		line-height: 3rem;
-		word-break: break-all;
+		/* word-break: break-all; */
 	}
 	.contents {
 		flex: 1;
@@ -140,7 +140,7 @@ const ContentBox = styled.div`
 		li {
 			font-size: 1rem;
 			line-height: 1.25rem;
-			word-break: break-all;
+			/* word-break: break-all; */
 			list-style: disc;
 		}
 	}
