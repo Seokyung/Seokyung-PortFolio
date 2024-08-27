@@ -59,7 +59,7 @@ ${reset}
   --font-family-eng-title: "Black Han Sans";
   --font-family-eng-card-title: "MilkAndHoney";
 
-  --font-color-default: #f8f8f8;
+  --font-color-default: #120f06;
   --font-color-primary: #e6781e;
   --font-color-secondary: #120f06;
   --font-color-grey: #5e5e5e;

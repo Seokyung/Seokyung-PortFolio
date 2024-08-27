@@ -65,7 +65,7 @@ const CompanyBox = styled.div`
 	}
 	span {
 		padding-left: 0.25rem;
-		color: var(--font-color-secondary);
+		color: var(--font-color-default);
 		font-size: 0.9rem;
 		font-weight: 400;
 		line-height: 1.25rem;
@@ -101,7 +101,7 @@ const RoleBox = styled.div`
 		gap: 0.5rem;
 	}
 	span {
-		color: var(--font-color-secondary);
+		color: var(--font-color-default);
 		font-family: var(--font-family-eng);
 		font-size: 1rem;
 		letter-spacing: -0.25px;
@@ -137,7 +137,7 @@ const ContentBox = styled.div`
 		padding-left: 1.125rem;
 		list-style-type: "- ";
 		li {
-			color: var(--font-color-secondary);
+			color: var(--font-color-default);
 			font-size: 0.9rem;
 			letter-spacing: -0.5px;
 			word-spacing: 1px;

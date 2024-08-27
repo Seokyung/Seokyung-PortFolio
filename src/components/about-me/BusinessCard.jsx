@@ -85,7 +85,7 @@ const Wrapper = styled.div`
 const Title = styled.h3`
 	margin: 0 0.25rem 0.5rem 0;
 	text-align: right;
-	color: var(--font-color-default);
+	color: var(--font-color-light);
 	font-family: var(--font-family-eng-card-title);
 	font-size: 1.5rem;
 	font-weight: 700;
@@ -180,7 +180,7 @@ const NameBox = styled.div`
 		font-size: 2.25rem;
 	}
 	span {
-		color: var(--font-color-secondary);
+		color: var(--font-color-default);
 		font-family: var(--font-family-eng);
 		font-size: 1rem;
 		letter-spacing: -0.5px;
@@ -196,7 +196,7 @@ const IconBox = styled.div`
 	gap: 0.5rem;
 	width: 100%;
 	svg {
-		color: var(--font-color-secondary);
+		color: var(--font-color-default);
 		width: 26px;
 		height: auto;
 	}
@@ -223,7 +223,7 @@ const InfoBox = styled.div`
 		text-align: left;
 	}
 	.content {
-		color: var(--font-color-secondary);
+		color: var(--font-color-default);
 		font-size: 1rem;
 		font-weight: 500;
 		letter-spacing: -0.25px;

@@ -85,7 +85,7 @@ const Logo = styled.a`
 	}
 	h1 {
 		flex: 1 1 auto;
-		color: var(--font-color-default);
+		color: var(--font-color-light);
 		font-size: 1rem;
 		font-weight: 600;
 		line-height: 1.5rem;
@@ -109,7 +109,7 @@ const Nav = styled.div`
 	li {
 		cursor: pointer;
 		text-align: center;
-		color: var(--font-color-default);
+		color: var(--font-color-light);
 		font-family: var(--font-family-eng);
 		font-size: 0.9rem;
 		line-height: 1rem;
