@@ -15,11 +15,11 @@ const WorkExperience = () => {
 			<SectionWrapperInner>
 				<Wrapper>
 					<h1>Work Experiences</h1>
-					<div>
+					<WorkWrapper>
 						{skg_work_experiences.map((item) => {
 							return <WorkBox key={item.id} item={item} />;
 						})}
-					</div>
+					</WorkWrapper>
 				</Wrapper>
 			</SectionWrapperInner>
 		</SectionWrapperOuter>
@@ -36,6 +36,12 @@ const Wrapper = styled.div`
 		letter-spacing: -1.5px;
 		line-height: 2.5rem;
 	}
+`;
+
+const WorkWrapper = styled.div`
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
 `;
 
 export default WorkExperience;
