@@ -1,9 +1,5 @@
 import styled from "styled-components";
-import {
-	SectionWrapperInner,
-	SectionWrapperOuter,
-} from "../components/section/SectionWrapper";
-import { skg_intro_texts } from "../assets/skg_infos";
+import { skg_intro_texts } from "../../assets/skg_infos";
 
 function Introduction() {
 	const renderIntroTexts = () => {
@@ -19,25 +15,17 @@ function Introduction() {
 			);
 		});
 	};
-	return (
-		<SectionWrapperOuter $background="var(--color-light-blue)">
-			<SectionWrapperInner>
-				<Wrapper>{renderIntroTexts()}</Wrapper>
-			</SectionWrapperInner>
-		</SectionWrapperOuter>
-	);
+	return <Wrapper>{renderIntroTexts()}</Wrapper>;
 }
 
 const Wrapper = styled.ul`
 	display: flex;
 	flex-direction: column;
 	gap: 2.5rem;
-	margin: 2rem 0;
 	padding: 0 1rem;
 	width: 100%;
 	@media all and (max-width: 768px) {
 		gap: 2rem;
-		margin: 1rem 0;
 		padding: 0 0.5rem;
 	}
 `;

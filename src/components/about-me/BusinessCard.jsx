@@ -8,68 +8,94 @@ import { ReactComponent as TistoryIcon } from "../../assets/svg/tistory_icon.svg
 
 const BusinessCard = () => {
 	return (
-		<Card>
-			<Logo>
-				<img src={seokyung_logo} alt="seokyung_logo" />
-			</Logo>
-			<InfoWrapper>
-				<InfoHeader>
-					<NameBox>
-						<h1>{skg_info.name}</h1>
-						<span>{skg_info.eng_name}</span>
-					</NameBox>
-					<IconBox>
-						<a className="content" href={`tel:${skg_info.tel}`}>
-							<PhoneIcon />
-						</a>
-						<a className="content" href={`mailto:${skg_info.email}`}>
-							<EmailIcon />
-						</a>
-						<a
-							className="content"
-							href={skg_info.github}
-							target="_blank"
-							rel="noreferrer"
-						>
-							<GithubIcon />
-						</a>
-						<a
-							className="content"
-							href={skg_info.blog}
-							target="_blank"
-							rel="noreferrer"
-						>
-							<TistoryIcon />
-						</a>
-					</IconBox>
-				</InfoHeader>
-				<Divider />
-				<InfoMain>
-					<InfoBox>
-						<span className="title">birth</span>
-						<span className="content">{skg_info.birth}</span>
-					</InfoBox>
-					<InfoBox>
-						<span className="title">location</span>
-						<span className="content">{skg_info.location}</span>
-					</InfoBox>
-					<InfoBox>
-						<span className="title">tel</span>
-						<span className="content">{skg_info.tel}</span>
-					</InfoBox>
-					<InfoBox>
-						<span className="title">email</span>
-						<span className="content">{skg_info.email}</span>
-					</InfoBox>
-					<InfoBox>
-						<span className="title">education</span>
-						<span className="content">{skg_info.education}</span>
-					</InfoBox>
-				</InfoMain>
-			</InfoWrapper>
-		</Card>
+		<Wrapper>
+			<Title>FE Developer Seokyung</Title>
+			<Card>
+				<Logo>
+					<img src={seokyung_logo} alt="seokyung_logo" />
+				</Logo>
+				<InfoWrapper>
+					<InfoHeader>
+						<NameBox>
+							<h1>{skg_info.name}</h1>
+							<span>{skg_info.eng_name}</span>
+						</NameBox>
+						<IconBox>
+							<a className="content" href={`tel:${skg_info.tel}`}>
+								<PhoneIcon />
+							</a>
+							<a className="content" href={`mailto:${skg_info.email}`}>
+								<EmailIcon />
+							</a>
+							<a
+								className="content"
+								href={skg_info.github}
+								target="_blank"
+								rel="noreferrer"
+							>
+								<GithubIcon />
+							</a>
+							<a
+								className="content"
+								href={skg_info.blog}
+								target="_blank"
+								rel="noreferrer"
+							>
+								<TistoryIcon />
+							</a>
+						</IconBox>
+					</InfoHeader>
+					<Divider />
+					<InfoMain>
+						<InfoBox>
+							<span className="title">birth</span>
+							<span className="content">{skg_info.birth}</span>
+						</InfoBox>
+						<InfoBox>
+							<span className="title">location</span>
+							<span className="content">{skg_info.location}</span>
+						</InfoBox>
+						<InfoBox>
+							<span className="title">tel</span>
+							<span className="content">{skg_info.tel}</span>
+						</InfoBox>
+						<InfoBox>
+							<span className="title">email</span>
+							<span className="content">{skg_info.email}</span>
+						</InfoBox>
+						<InfoBox>
+							<span className="title">education</span>
+							<span className="content">{skg_info.education}</span>
+						</InfoBox>
+					</InfoMain>
+				</InfoWrapper>
+			</Card>
+		</Wrapper>
 	);
 };
+
+const Wrapper = styled.div`
+	width: 100%;
+	max-width: 800px;
+	@media all and (max-width: 768px) {
+		max-width: 400px;
+	}
+`;
+
+const Title = styled.h3`
+	margin: 0 0.25rem 0.5rem 0;
+	text-align: right;
+	color: var(--font-color-default);
+	font-family: var(--font-family-eng-card-title);
+	font-size: 1.5rem;
+	font-weight: 700;
+	line-height: 1.5rem;
+	letter-spacing: -0.5px;
+	@media all and (max-width: 768px) {
+		font-size: 1.25rem;
+		letter-spacing: -1.25px;
+	}
+`;
 
 const Card = styled.div`
 	overflow: hidden;
