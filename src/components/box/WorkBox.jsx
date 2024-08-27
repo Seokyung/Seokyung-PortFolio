@@ -64,6 +64,7 @@ const CompanyBox = styled.div`
 		line-height: 2.25rem;
 	}
 	span {
+		padding-left: 0.25rem;
 		color: var(--font-color-secondary);
 		font-size: 0.9rem;
 		font-weight: 400;

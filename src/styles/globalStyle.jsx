@@ -7,15 +7,21 @@ import VitroCore from "../assets/fonts/VitroCore.woff";
 export const GlobalStyle = createGlobalStyle`
 ${reset}
 @font-face {
-    font-family: 'SOYOMapleBoldTTF';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/SOYOMapleBoldTTF.woff2') format('woff2');
-    font-weight: 700;
+    font-family: 'NPSfontRegular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/NPSfontRegular.woff2') format('woff2');
+    font-weight: normal;
     font-style: normal;
 }
 @font-face {
-    font-family: 'NPSfontRegular';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/NPSfontRegular.woff2') format('woff2');
-    font-weight: 400;
+    font-family: 'VitroCore';
+    src: local('VitroCore'), local('VitroCore');
+    src: url(${VitroCore}) format('woff');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'RixXladywatermelonR';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-4@1.0/RixXladywatermelonR.woff2') format('woff2');
+    font-weight: normal;
     font-style: normal;
 }
 @font-face {
@@ -28,12 +34,6 @@ ${reset}
     font-family: 'DukeCharming';
     src: local('DukeCharming'), local('DukeCharming');
     src: url(${DukeCharming}) format('woff');
-    font-style: normal;
-}
-@font-face {
-    font-family: 'VitroCore';
-    src: local('VitroCore'), local('VitroCore');
-    src: url(${VitroCore}) format('woff');
     font-style: normal;
 }
 :root {
@@ -62,6 +62,7 @@ ${reset}
   --font-color-default: #f8f8f8;
   --font-color-primary: #e6781e;
   --font-color-secondary: #120f06;
+  --font-color-grey: #5e5e5e;
   --font-color-light: #f8f8f8;
 
   --font-size-default: 1rem;

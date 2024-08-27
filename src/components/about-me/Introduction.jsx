@@ -51,12 +51,18 @@ const TalkBubble = styled.li`
 		border-bottom: 10px solid transparent;
 	}
 	&:hover {
-		box-shadow: 0 0 20px 2px rgba(47, 19, 5, 0.3);
+		box-shadow: 0 0 10px 3px rgba(47, 19, 5, 0.4);
 	}
 	span {
-		font-family: "NPSfontRegular";
-		color: var(--font-color-secondary);
+		font-family: "RixXladywatermelonR";
+		font-size: 1.125rem;
+		color: #393837;
+		letter-spacing: -0.9px;
+		word-spacing: 2px;
 		line-height: 1.25rem;
+		@media all and (max-width: 768px) {
+			font-size: 1rem;
+		}
 	}
 `;
 
