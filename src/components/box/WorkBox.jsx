@@ -49,6 +49,7 @@ const Box = styled.div`
 	flex-direction: column;
 	padding: 1.25rem 1rem;
 	width: 100%;
+	max-width: 850px;
 	background-color: var(--bg-color-light);
 	border-radius: 10px;
 `;
@@ -82,6 +83,7 @@ const ContentWrapper = styled.div`
 	display: flex;
 	gap: 1.5rem;
 	padding: 0.5rem;
+	width: 100%;
 	@media (max-width: 768px) {
 		flex-direction: column;
 	}
@@ -91,6 +93,7 @@ const RoleBox = styled.div`
 	display: flex;
 	flex-direction: column;
 	gap: 0.75rem;
+	width: 25%;
 	span {
 		color: var(--font-color-secondary);
 		font-family: var(--font-family-eng);
@@ -108,6 +111,7 @@ const DescriptionBox = styled.div`
 	display: flex;
 	flex-direction: column;
 	gap: 1.25rem;
+	width: 100%;
 `;
 
 const ContentBox = styled.div`
