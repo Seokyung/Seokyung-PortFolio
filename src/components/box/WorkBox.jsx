@@ -65,8 +65,8 @@ const CompanyBox = styled.div`
 	}
 	span {
 		color: var(--font-color-secondary);
-		font-size: 1rem;
-		font-weight: 500;
+		font-size: 0.9rem;
+		font-weight: 400;
 		line-height: 1.25rem;
 		letter-spacing: -0.5px;
 		word-spacing: 1.25px;
@@ -86,6 +86,7 @@ const ContentWrapper = styled.div`
 	width: 100%;
 	@media (max-width: 768px) {
 		flex-direction: column;
+		padding: 0 0.25rem;
 	}
 `;
 
@@ -94,6 +95,10 @@ const RoleBox = styled.div`
 	flex-direction: column;
 	gap: 0.75rem;
 	width: 25%;
+	@media (max-width: 768px) {
+		width: 100%;
+		gap: 0.5rem;
+	}
 	span {
 		color: var(--font-color-secondary);
 		font-family: var(--font-family-eng);
@@ -137,13 +142,11 @@ const ContentBox = styled.div`
 			word-spacing: 1px;
 			line-height: 1.375rem;
 			a {
+				color: inherit;
 				svg {
 					color: var(--color-orange);
 					width: 14px;
 					height: auto;
-				}
-				&:visited {
-					color: inherit;
 				}
 				&:hover,
 				&:hover svg {
