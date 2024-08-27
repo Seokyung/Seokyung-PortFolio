@@ -29,7 +29,7 @@ const WorkExperience = () => {
 const Wrapper = styled.div`
 	margin: 2rem 0;
 	h1 {
-		margin: 0 0 0.25rem 0.5rem;
+		margin: 0 0 0.5rem 0.5rem;
 		color: var(--font-color-primary);
 		font-family: var(--font-family-eng-title);
 		font-size: 2rem;
