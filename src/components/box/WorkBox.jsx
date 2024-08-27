@@ -25,7 +25,7 @@ const WorkBox = ({ item }) => {
 						</ul>
 					</ContentBox>
 					<ContentBox>
-						<h4>링크</h4>
+						<h4>URL</h4>
 						<ul>
 							{item?.links.map((el, idx) => {
 								return (
@@ -59,9 +59,11 @@ const CompanyBox = styled.div`
 		margin-bottom: 0.5rem;
 		color: var(--font-color-primary);
 		font-family: var(--font-family-kor-title);
-		font-size: 2rem;
-		letter-spacing: 0.5px;
-		line-height: 2.25rem;
+		font-size: 1.75rem;
+		letter-spacing: 0.75px;
+		line-height: 2rem;
+		word-break: break-all;
+		word-wrap: break-word;
 	}
 	span {
 		padding-left: 0.25rem;
@@ -142,18 +144,17 @@ const ContentBox = styled.div`
 			letter-spacing: -0.5px;
 			word-spacing: 1px;
 			line-height: 1.375rem;
-			a {
-				color: inherit;
-				svg {
-					color: var(--color-orange);
-					width: 14px;
-					height: auto;
-				}
-				&:hover,
-				&:hover svg {
-					color: var(--color-orange);
-				}
-			}
+		}
+	}
+	a {
+		color: var(--color-blue);
+		svg {
+			color: inherit;
+			width: 14px;
+			height: auto;
+		}
+		&:hover {
+			color: var(--color-orange);
 		}
 	}
 `;

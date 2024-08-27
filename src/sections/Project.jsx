@@ -8,15 +8,15 @@ import { skg_projects } from "../assets/skg_infos";
 
 function Project() {
 	return (
-		<SectionWrapperOuter id="projects">
+		<SectionWrapperOuter id="projects" $background="var(--color-dark-green)">
 			<SectionWrapperInner>
 				<Wrapper>
 					<h1>Projects</h1>
-					<div>
-						{skg_projects.map((item) => {
-							return <ProjectBox key={item.id} project={item} />;
+					<ProjectWrapper>
+						{skg_projects.map((project) => {
+							return <ProjectBox key={project.id} item={project} />;
 						})}
-					</div>
+					</ProjectWrapper>
 				</Wrapper>
 			</SectionWrapperInner>
 		</SectionWrapperOuter>
@@ -24,23 +24,22 @@ function Project() {
 }
 
 const Wrapper = styled.div`
-	width: 100%;
-	/* max-width: 1000px; */
-	margin: 1rem 0;
+	margin: 2rem 0;
 	h1 {
-		margin-bottom: 1rem;
-		padding: 0.5rem;
-		/* color: #cc6c1c; */
-		color: var(--font-color-primary);
+		margin: 0 0 0.5rem 0.5rem;
+		/* color: var(--font-color-primary); */
+		color: var(--color-light-orange);
 		font-family: var(--font-family-eng-title);
-		font-size: var(--font-size-title-lg);
-		line-height: 2.75rem;
+		font-size: 2rem;
+		letter-spacing: -1.5px;
+		line-height: 2.5rem;
 	}
-	> div {
-		display: flex;
-		flex-direction: column;
-		gap: 4rem;
-	}
+`;
+
+const ProjectWrapper = styled.div`
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
 `;
 
 export default Project;

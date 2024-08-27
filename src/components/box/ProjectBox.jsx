@@ -1,148 +1,189 @@
 import styled from "styled-components";
+import { ReactComponent as LinkIcon } from "../../assets/svg/link_icon.svg";
 
-const ProjectBox = ({ project }) => {
+const ProjectBox = ({ item }) => {
 	return (
-		<Box key={project?.id}>
-			<h2>{project?.name}</h2>
-			<div className="contents">
-				<div>
-					<span className="title">{project?.title}</span>
-					<hr />
-					<span className="sector">{project?.sector}</span>
-					<span className="role">{project?.role}</span>
-					<span className="period">{project?.period}</span>
-				</div>
-				<div className="contents-info">
-					<ContentBox>
-						<h4>Descriptions</h4>
+		<Box key={item?.id}>
+			<ProjectInfo>
+				<h2>{item?.name}</h2>
+				<span>{item?.title}</span>
+			</ProjectInfo>
+			<Divider />
+			<ProjectWrapper>
+				<RoleBox>
+					<span className="sector">{item?.sector}</span>
+					<span className="role">{item?.role}</span>
+					<span className="period">{item?.period}</span>
+				</RoleBox>
+				<ContentBox>
+					<Content>
+						<h4>프로젝트 소개</h4>
 						<ul>
-							{project?.descriptions.map((el, idx) => {
+							{item?.descriptions.map((el, idx) => {
 								return <li key={idx}>{el}</li>;
 							})}
 						</ul>
-					</ContentBox>
-					<ContentBox>
-						<h4>What Did I Do</h4>
+					</Content>
+					<Content>
+						<h4>담당 내용</h4>
 						<ul>
-							{project?.works.map((el, idx) => {
+							{item?.works.map((el, idx) => {
 								return <li key={idx}>{el}</li>;
 							})}
 						</ul>
-					</ContentBox>
-					<ContentBox>
-						<h4>Links</h4>
-						<ul>
-							{project?.links.map((el, idx) => {
-								return (
-									<li key={idx}>
-										<a href={el} target="_blank" rel="noreferrer">
-											{el}
-										</a>
-									</li>
-								);
-							})}
-						</ul>
-					</ContentBox>
-				</div>
-				<div className="modal">
+					</Content>
+					<Content>
+						<h4>Github</h4>
+						<a href={item?.github} target="_blank" rel="noreferrer">
+							{item?.github.slice(8)}
+						</a>
+					</Content>
+					{item.url && (
+						<Content>
+							<h4>URL</h4>
+							<a href={item?.url} target="_blank" rel="noreferrer">
+								{item?.name} <LinkIcon />
+							</a>
+						</Content>
+					)}
+				</ContentBox>
+				<ProjectModal>
 					<span>프로젝트 화면</span>
-				</div>
-			</div>
+				</ProjectModal>
+			</ProjectWrapper>
 		</Box>
 	);
 };
 
 const Box = styled.div`
-	flex: 1;
 	display: flex;
 	flex-direction: column;
-	padding: 2rem;
+	padding: 1.25rem 1rem;
 	width: 100%;
-	/* background-color: var(--bg-color-secondary); */
-	background-color: #cc6c1c;
-	border-radius: 20px;
+	max-width: 850px;
+	background-color: var(--bg-color-light);
+	border-radius: 10px;
+`;
+
+const ProjectInfo = styled.div`
 	h2 {
 		margin-bottom: 0.5rem;
-		color: var(--bg-color-light);
-		font-family: var(--font-family-eng-card-title);
-		font-size: var(--font-size-title-lg);
-		line-height: 3rem;
+		color: var(--color-light-orange);
+		font-family: var(--font-family-kor-title);
+		font-size: 1.75rem;
+		letter-spacing: 0.75px;
+		line-height: 2rem;
 		word-break: break-all;
+		word-wrap: break-word;
 	}
-	.contents {
-		flex: 1;
-		display: flex;
-		gap: 1.5rem;
-		padding: 0.5rem;
-		@media (max-width: 768px) {
-			flex-direction: column;
-		}
-		div {
-			flex: 1;
-			display: flex;
-			flex-direction: column;
-		}
-		.contents-info {
-			gap: 1rem;
-		}
-		.title {
-			margin: 0.5rem 0;
-			color: #111;
-			font-size: 1.125rem;
-			font-weight: 600;
-			line-height: 1.375rem;
-			word-spacing: 1.5px;
-		}
-		.sector,
-		.role,
-		.period {
-			margin: 0.5rem 0;
-			color: #222;
-			font-family: var(--font-family-eng);
-			font-size: 1.125rem;
-			line-height: 1.25rem;
-		}
-		hr {
-			width: 100%;
-			height: 1px;
-			background-color: #333;
-		}
-		.modal {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			width: auto;
-			height: auto;
-			background-color: #555;
-			border-radius: 10px;
-			span {
-				color: #fff;
-			}
-		}
+	span {
+		padding-left: 0.25rem;
+		color: var(--font-color-default);
+		font-size: 0.9rem;
+		font-weight: 400;
+		line-height: 1.25rem;
+		letter-spacing: -0.5px;
+		word-spacing: 1.25px;
+	}
+`;
+
+const Divider = styled.hr`
+	width: 100%;
+	height: 1px;
+	margin: 1rem 0;
+`;
+
+const ProjectWrapper = styled.div`
+	display: flex;
+	gap: 1.5rem;
+	padding: 0.5rem;
+	width: 100%;
+	@media (max-width: 768px) {
+		flex-direction: column;
+		padding: 0 0.25rem;
+	}
+`;
+
+const RoleBox = styled.div`
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+	width: 25%;
+	@media (max-width: 768px) {
+		width: 100%;
+		gap: 0.5rem;
+	}
+	span {
+		color: var(--font-color-default);
+		font-family: var(--font-family-eng);
+		font-size: 1rem;
+		letter-spacing: -0.25px;
+		line-height: 1.25rem;
+	}
+	.sector,
+	.role,
+	.period {
 	}
 `;
 
 const ContentBox = styled.div`
-	padding: 0.75rem;
-	background-color: var(--bg-color-light);
+	display: flex;
+	flex-direction: column;
+	gap: 1.25rem;
+	width: 100%;
+`;
+
+const Content = styled.div`
 	border-radius: 10px;
 	h4 {
-		margin-bottom: 0.25rem;
+		color: var(--color-light-orange);
+		margin-bottom: 0.5rem;
 		font-size: 1rem;
-		font-weight: 700;
+		font-weight: 600;
+		letter-spacing: -1.5px;
+		word-spacing: -1.25px;
 	}
 	ul {
 		display: flex;
 		flex-direction: column;
-		gap: 0.25rem;
-		padding: 0.25rem 0;
-		padding-left: 1rem;
+		gap: 0.5rem;
+		padding-left: 1.125rem;
+		list-style-type: "- ";
 		li {
-			font-size: 1rem;
-			line-height: 1.25rem;
-			word-break: break-all;
-			list-style: disc;
+			color: var(--font-color-default);
+			font-size: 0.9rem;
+			letter-spacing: -0.5px;
+			word-spacing: 1px;
+			line-height: 1.375rem;
 		}
+	}
+	a {
+		padding-left: 1.125rem;
+		color: var(--color-blue);
+		svg {
+			color: inherit;
+			width: 14px;
+			height: auto;
+		}
+		&:hover {
+			color: var(--color-light-orange);
+		}
+	}
+`;
+
+const ProjectModal = styled.div`
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 30%;
+	height: auto;
+	aspect-ratio: 1/1;
+	background-color: #bababa;
+	border-radius: 10px;
+	span {
+	}
+	@media (max-width: 768px) {
+		width: 100%;
 	}
 `;
 

@@ -45,6 +45,7 @@ ${reset}
   --color-light-orange: #c4986b;
   --color-orange: #e6781e;
   --color-light-blue: #6c847c;
+  --color-blue: #0c6cac;
   --color-dark-green: #43584e;
   --color-light-green: #637f69;
   --color-dark-brown: #372619;

@@ -16,8 +16,8 @@ const WorkExperience = () => {
 				<Wrapper>
 					<h1>Work Experiences</h1>
 					<WorkWrapper>
-						{skg_work_experiences.map((item) => {
-							return <WorkBox key={item.id} item={item} />;
+						{skg_work_experiences.map((work) => {
+							return <WorkBox key={work.id} item={work} />;
 						})}
 					</WorkWrapper>
 				</Wrapper>
