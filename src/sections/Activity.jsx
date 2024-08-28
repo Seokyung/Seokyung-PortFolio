@@ -74,11 +74,10 @@ const ActivityContainer = styled.div`
 	flex-direction: column;
 	grid-area: ${(props) => props.$area};
 	h4 {
-		margin: 0 0 0.375rem 0.25rem;
+		margin: 0 0 0.25rem 0.25rem;
 		color: var(--color-dark-brown);
 		font-size: 1.375rem;
 		font-family: var(--font-family-eng-card-title);
-		font-weight: 500;
 		text-transform: capitalize;
 	}
 `;
@@ -86,8 +85,8 @@ const ActivityContainer = styled.div`
 const ActivityBox = styled.ul`
 	display: flex;
 	flex-direction: column;
-	gap: 0.25rem;
-	padding: 0.75rem 1rem 0.75rem 1.5rem;
+	gap: 0.5rem;
+	padding: 1rem 1rem 1rem 1.5rem;
 	width: 100%;
 	height: 100%;
 	/* max-height: 200px; */
@@ -95,11 +94,11 @@ const ActivityBox = styled.ul`
 	border-radius: 10px;
 	list-style-type: "- ";
 	li {
-		font-size: 0.9rem;
-		font-weight: 500;
+		font-size: 1rem;
+		font-weight: 400;
 		letter-spacing: -0.85px;
-		word-spacing: 1px;
-		line-height: 1.25rem;
+		word-spacing: 0.5px;
+		line-height: 1.375rem;
 	}
 `;
 

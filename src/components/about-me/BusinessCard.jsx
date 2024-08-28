@@ -225,10 +225,10 @@ const InfoBox = styled.div`
 	.content {
 		color: var(--font-color-default);
 		font-size: 1rem;
-		font-weight: 500;
-		letter-spacing: -0.25px;
-		line-height: 1.25rem;
-		word-spacing: -1px;
+		font-weight: 400;
+		letter-spacing: -0.45px;
+		line-height: 1.125rem;
+		word-spacing: -0.8px;
 	}
 `;
 

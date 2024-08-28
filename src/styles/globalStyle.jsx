@@ -55,7 +55,7 @@ ${reset}
   --color-grey-brown: #585140;
 
   // font
-  --font-family-kor: "Nanum Gothic";
+  --font-family-kor: "Pretendard Variable";
   --font-family-kor-title: "VitroCore";
   --font-family-kor-card-title: "Bagel Fat One";
   --font-family-eng: "Raleway";

@@ -66,13 +66,13 @@ const CompanyBox = styled.div`
 		word-wrap: break-word;
 	}
 	span {
-		padding-left: 0.25rem;
+		padding-left: 4px;
 		color: var(--font-color-default);
 		font-size: 0.9rem;
 		font-weight: 400;
-		line-height: 1.25rem;
-		letter-spacing: -0.5px;
-		word-spacing: 1.25px;
+		line-height: 1.125rem;
+		letter-spacing: -0.75px;
+		word-spacing: 1px;
 	}
 `;
 
@@ -128,9 +128,9 @@ const ContentBox = styled.div`
 		color: var(--font-color-primary);
 		margin-bottom: 0.5rem;
 		font-size: 1rem;
-		font-weight: 600;
-		letter-spacing: -1.5px;
-		word-spacing: -1.25px;
+		font-weight: 700;
+		letter-spacing: -0.75px;
+		word-spacing: -1px;
 	}
 	ul {
 		display: flex;
@@ -140,9 +140,9 @@ const ContentBox = styled.div`
 		list-style-type: "- ";
 		li {
 			color: var(--font-color-default);
-			font-size: 0.9rem;
-			letter-spacing: -0.5px;
-			word-spacing: 1px;
+			font-size: 1rem;
+			letter-spacing: -0.75px;
+			word-spacing: 0.5px;
 			line-height: 1.375rem;
 		}
 	}
@@ -150,7 +150,7 @@ const ContentBox = styled.div`
 		color: var(--color-blue);
 		svg {
 			color: inherit;
-			width: 14px;
+			width: 12px;
 			height: auto;
 		}
 		&:hover {
