@@ -25,4 +25,7 @@ export const SectionWrapperInner = styled.div`
 	width: 100%;
 	max-width: var(--max-width);
 	height: 100%;
+	@media all and (max-width: 768px) {
+		flex-wrap: nowrap;
+	}
 `;

@@ -43,6 +43,8 @@ ${reset}
   --max-box-width: 850px;
 
   // color
+  --color-white: #f8f8f8;
+  --color-black: #120f06;
   --color-dark-orange: #c06016;
   --color-light-orange: #c4986b;
   --color-orange: #e6781e;
@@ -91,12 +93,13 @@ ${reset}
     -moz-osx-font-smoothing: grayscale;
   }
   body {
+    flex-wrap: wrap;
     margin-top: var(--nav-height);
     color: var(--font-color-default);
     font-family: var(--font-family-kor), sans-serif;
     background-color: var(--bg-color-default);
     word-break: keep-all;
-    word-wrap: break-word;
+    overflow-wrap: break-word;
     @media all and (max-width: 768px) {
       margin-top: var(--nav-height-mobile);
 		}

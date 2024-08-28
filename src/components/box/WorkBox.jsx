@@ -62,8 +62,6 @@ const CompanyBox = styled.div`
 		font-size: 1.75rem;
 		letter-spacing: 0.75px;
 		line-height: 2rem;
-		word-break: break-all;
-		word-wrap: break-word;
 	}
 	span {
 		padding-left: 4px;
