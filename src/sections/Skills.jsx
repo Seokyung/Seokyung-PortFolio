@@ -20,7 +20,7 @@ function Skills() {
 	};
 
 	return (
-		<SectionWrapperOuter id="skills">
+		<SectionWrapperOuter id="skills" $background="var(--color-light-blue)">
 			<SectionWrapperInner>
 				<Wrapper>
 					<h1>Skills</h1>
@@ -45,7 +45,7 @@ const Wrapper = styled.div`
 	margin: 1.5rem 0;
 	h1 {
 		font-family: var(--font-family-eng-title);
-		font-size: var(--font-size-title-lg);
+		font-size: var(--font-size-title);
 		color: var(--font-color-primary);
 	}
 	> div {
@@ -63,7 +63,7 @@ const SectorBox = styled.div`
 	h2 {
 		margin-bottom: 0.75rem;
 		font-family: var(--font-family-eng);
-		font-size: var(--font-size-title);
+		font-size: 1.5rem;
 		color: var(--font-color-light);
 	}
 	> div {
@@ -88,13 +88,13 @@ const SkillBox = styled.div`
 	padding: 0.5rem;
 	img {
 		width: 100%;
-		max-width: 200px;
+		max-width: 100px;
 		height: auto;
 	}
 	span {
 		margin-top: 0.75rem;
 		font-family: var(--font-family-eng);
-		font-size: var(--font-size-lg);
+		font-size: 1.5rem;
 		font-weight: 500;
 		color: var(--font-color-light);
 		text-transform: capitalize;

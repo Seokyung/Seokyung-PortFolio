@@ -60,7 +60,7 @@ const Box = styled.div`
 	flex-direction: column;
 	padding: 1.25rem 1rem;
 	width: 100%;
-	max-width: 850px;
+	max-width: var(--max-box-width);
 	background-color: var(--bg-color-light);
 	border-radius: 10px;
 `;

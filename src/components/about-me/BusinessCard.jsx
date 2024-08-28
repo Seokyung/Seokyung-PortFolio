@@ -76,7 +76,7 @@ const BusinessCard = () => {
 
 const Wrapper = styled.div`
 	width: 100%;
-	max-width: 800px;
+	max-width: var(--max-card-width);
 	@media all and (max-width: 768px) {
 		max-width: 400px;
 	}

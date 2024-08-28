@@ -32,7 +32,7 @@ const Wrapper = styled.div`
 		margin: 0 0 0.5rem 0.5rem;
 		color: var(--font-color-primary);
 		font-family: var(--font-family-eng-title);
-		font-size: 2rem;
+		font-size: var(--font-size-title);
 		letter-spacing: -1.5px;
 		line-height: 2.5rem;
 	}
