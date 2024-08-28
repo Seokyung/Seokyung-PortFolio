@@ -3,68 +3,34 @@ import {
 	SectionWrapperInner,
 	SectionWrapperOuter,
 } from "../components/section/SectionWrapper";
-
-const skg_activities = [
-	{
-		id: 1,
-		sector: "award",
-		title: "가천대학교 컴퓨터공학과 주최 아이디어톤 우수상 수상 (2018.12)",
-	},
-	{
-		id: 2,
-		sector: "award",
-		title: "제 1회 가천대학교 와글와글 해커톤 우수상 수상 (2023.08)",
-	},
-	{
-		id: 3,
-		sector: "certificate",
-		title: "정보처리산업기사 자격증 취득 (2020.12)",
-	},
-	{
-		id: 4,
-		sector: "certificate",
-		title: "TOEIC - 875 (2022.10.30)",
-	},
-	{
-		id: 5,
-		sector: "certificate",
-		title: "정보처리기사 자격증 취득 (2023.09)",
-	},
-	{
-		id: 6,
-		sector: "etc",
-		title: "디랩 코딩학원 Robotics 교사 재직 (2020.04 - 2020.08)",
-	},
-];
+import { skg_activities } from "../assets/skg_infos";
 
 function Activity() {
 	const renderActivities = (sector) => {
-		return skg_activities
-			.filter((el) => el.sector === sector)
-			.map((item) => {
-				return <span key={item.id}>{item.title}</span>;
-			});
+		return (
+			<ActivityContainer $area={sector}>
+				<h4>{sector}</h4>
+				<ActivityBox>
+					{skg_activities
+						.filter((el) => el.sector === sector)
+						.map((item) => {
+							return <li key={item.id}>{item.title}</li>;
+						})}
+				</ActivityBox>
+			</ActivityContainer>
+		);
 	};
 
 	return (
-		<SectionWrapperOuter id="activities" $background="#111">
+		<SectionWrapperOuter id="activities" $background="var(--color-light-brown)">
 			<SectionWrapperInner>
 				<Wrapper>
 					<h1>Activity</h1>
-					<div>
-						<Container>
-							<h2>Awards</h2>
-							<ActivityBox>{renderActivities("award")}</ActivityBox>
-						</Container>
-						<Container>
-							<h2>Certificates</h2>
-							<ActivityBox>{renderActivities("certificate")}</ActivityBox>
-						</Container>
-						<Container>
-							<h2>ETC</h2>
-							<ActivityBox>{renderActivities("etc")}</ActivityBox>
-						</Container>
-					</div>
+					<ActivityWrapper>
+						{renderActivities("certificates")}
+						{renderActivities("awards")}
+						{renderActivities("etc")}
+					</ActivityWrapper>
 				</Wrapper>
 			</SectionWrapperInner>
 		</SectionWrapperOuter>
@@ -73,42 +39,67 @@ function Activity() {
 
 const Wrapper = styled.div`
 	width: 100%;
-	/* max-width: 1200px; */
-	margin: 3rem 0;
+	max-width: var(--max-card-width);
+	margin: 2rem 0;
 	h1 {
-		margin-bottom: 2rem;
+		margin: 0 0 1rem 0.5rem;
 		color: var(--font-color-light);
-		font-size: var(--font-size-title-lg);
+		font-size: var(--font-size-title);
 		font-family: var(--font-family-eng-title);
 	}
-	> div {
-		display: flex;
-		flex-direction: column;
-		gap: 3rem;
+`;
+
+const ActivityWrapper = styled.div`
+	display: grid;
+	grid-template-areas:
+		"certificates awards"
+		"certificates etc";
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	gap: 1.5rem 1rem;
+	width: 100%;
+	@media (max-width: 768px) {
+		grid-template-areas:
+			"certificates"
+			"awards"
+			"etc";
+		grid-template-columns: repeat(1, 1fr);
+		grid-template-rows: repeat(1, 1fr);
+		gap: 1rem;
 	}
 `;
 
-const Container = styled.div`
-	h2 {
-		margin-bottom: 0.75rem;
-		padding-left: 0.25rem;
-		color: #999;
-		font-size: var(--font-size-lg);
-		font-family: var(--font-family-eng);
-		font-weight: 500;
-	}
-`;
-
-const ActivityBox = styled.div`
+const ActivityContainer = styled.div`
 	display: flex;
 	flex-direction: column;
-	gap: 0.75rem;
-	padding: 1rem 1.5rem;
-	background-color: #fff;
+	grid-area: ${(props) => props.$area};
+	h4 {
+		margin: 0 0 0.375rem 0.25rem;
+		color: var(--color-dark-brown);
+		font-size: 1.375rem;
+		font-family: var(--font-family-eng-card-title);
+		font-weight: 500;
+		text-transform: capitalize;
+	}
+`;
+
+const ActivityBox = styled.ul`
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+	padding: 0.75rem 1rem 0.75rem 1.5rem;
+	width: 100%;
+	height: 100%;
+	/* max-height: 200px; */
+	background-color: var(--bg-color-light);
 	border-radius: 10px;
-	span {
-		font-size: var(--font-size-md);
-		line-height: 1.5rem;
+	list-style-type: "- ";
+	li {
+		font-size: 0.9rem;
+		font-weight: 500;
+		letter-spacing: -0.85px;
+		word-spacing: 1px;
+		line-height: 1.25rem;
 	}
 `;
 

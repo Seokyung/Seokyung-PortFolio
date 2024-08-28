@@ -39,6 +39,8 @@ ${reset}
 :root {
   // width
   --max-width: 1000px;
+  --max-card-width: 780px;
+  --max-box-width: 850px;
 
   // color
   --color-dark-orange: #c06016;
@@ -67,11 +69,7 @@ ${reset}
   --font-color-light: #f8f8f8;
 
   --font-size-default: 1rem;
-  --font-size-sm: 0.9rem;
-  --font-size-md: 1.25rem;
-  --font-size-lg: 1.75rem;
-  --font-size-title: calc(2rem + 0.75vw);
-  --font-size-title-lg: calc(2.5rem + 0.75vw);
+  --font-size-title: 2rem;
 
   // background
   --bg-color-default: #585140;
