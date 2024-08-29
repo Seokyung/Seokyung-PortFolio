@@ -39,8 +39,8 @@ ${reset}
 :root {
   // width
   --max-width: 1000px;
-  --max-card-width: 780px;
-  --max-box-width: 850px;
+  --max-card-width: 730px;
+  --max-box-width: 900px;
 
   // color
   --color-white: #f8f8f8;
@@ -185,7 +185,7 @@ ${reset}
     right: 10%;
   }
   100% {
-    right: 2%;
+    right: 0;
   }
 }
 @keyframes appearFromBottom {
