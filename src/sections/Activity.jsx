@@ -65,7 +65,7 @@ const ActivityWrapper = styled.div`
 			"etc";
 		grid-template-columns: repeat(1, 1fr);
 		grid-template-rows: repeat(1, 1fr);
-		gap: 1rem;
+		gap: 1.5rem;
 	}
 `;
 
@@ -89,7 +89,6 @@ const ActivityBox = styled.ul`
 	padding: 1rem 1rem 1rem 1.5rem;
 	width: 100%;
 	height: 100%;
-	/* max-height: 200px; */
 	background-color: var(--bg-color-light);
 	border-radius: 10px;
 	list-style-type: "- ";
