@@ -59,12 +59,8 @@ const ActivityWrapper = styled.div`
 	gap: 1.5rem 1rem;
 	width: 100%;
 	@media (max-width: 768px) {
-		grid-template-areas:
-			"certificates"
-			"awards"
-			"etc";
-		grid-template-columns: repeat(1, 1fr);
-		grid-template-rows: repeat(1, 1fr);
+		display: flex;
+		flex-direction: column;
 		gap: 1.5rem;
 	}
 `;
