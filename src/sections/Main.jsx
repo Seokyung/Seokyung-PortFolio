@@ -19,7 +19,10 @@ function Main() {
 					<Introduction>
 						<h3>안녕하세요!</h3>
 						<h1>
-							꾸준히 성장하는 개발자 <span id="name">지서경</span>입니다.
+							꾸준히 성장하는 개발자
+							<br />
+							<span id="name">지서경</span>
+							입니다.
 						</h1>
 					</Introduction>
 					<DevIconRight>
@@ -54,13 +57,12 @@ const DevIcon = styled.div`
 	}
 	span {
 		color: #4e544e;
-		font-family: "Elice Digital Coding";
+		font-family: var(--font-family-kor);
 		font-size: 180px;
-		font-weight: 600;
-		letter-spacing: -24px;
+		font-weight: 700;
+		letter-spacing: -2px;
 		@media (max-width: 768px) {
 			font-size: 150px;
-			letter-spacing: -20px;
 		}
 	}
 `;
@@ -69,15 +71,13 @@ const DevIconLeft = styled(DevIcon)`
 	animation-name: slideLeft;
 	@media (max-width: 768px) {
 		top: -50%;
-		transform: translateY(5%);
 	}
 `;
 const DevIconRight = styled(DevIcon)`
-	right: 2%;
+	right: 0;
 	animation-name: slideRight;
 	@media (max-width: 768px) {
 		bottom: -50%;
-		transform: translateY(15%);
 	}
 `;
 
@@ -94,15 +94,16 @@ const Introduction = styled.div`
 		text-align: center;
 	}
 	h3 {
-		margin-bottom: 0.65rem;
+		margin-bottom: 0.5rem;
 		font-size: 1.75rem;
 		letter-spacing: 1px;
 	}
 	h1 {
 		font-size: 2.25rem;
-		line-height: 2.85rem;
+		line-height: 2.875rem;
 		letter-spacing: 0.5px;
 		#name {
+			display: inline-block;
 			color: var(--color-dark-orange);
 			font-size: 2.5rem;
 			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
