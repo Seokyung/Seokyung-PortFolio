@@ -3,7 +3,10 @@ import styled from "styled-components";
 function Footer() {
 	return (
 		<Wrapper>
-			<h1>&copy;Seokyung 2023</h1>
+			<span>
+				&copy;2024 Developed & Designed by{" "}
+				<span className="bold">Seokyung Jee</span>
+			</span>
 		</Wrapper>
 	);
 }
@@ -14,9 +17,19 @@ const Wrapper = styled.footer`
 	align-items: center;
 	width: 100%;
 	height: 15vh;
-	background-color: #111;
-	h1 {
-		color: #fff;
+	padding: 1rem;
+	span {
+		color: var(--font-color-light);
+		font-family: var(--font-family-kor);
+		font-size: 0.9rem;
+		font-weight: 300;
+		letter-spacing: -0.35px;
+		word-spacing: 1px;
+		line-height: 1.125rem;
+		text-align: center;
+		.bold {
+			font-weight: 500;
+		}
 	}
 `;
 
