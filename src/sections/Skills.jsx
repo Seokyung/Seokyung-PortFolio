@@ -96,10 +96,10 @@ const SkillBox = styled.div`
 	align-items: center;
 	img {
 		width: 100%;
-		max-width: 100px;
+		max-width: 80px;
 		height: auto;
 		@media (max-width: 768px) {
-			max-width: 80px;
+			max-width: 60px;
 		}
 	}
 	span {
