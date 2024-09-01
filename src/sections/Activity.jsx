@@ -70,9 +70,9 @@ const ActivityContainer = styled.div`
 	flex-direction: column;
 	grid-area: ${(props) => props.$area};
 	h4 {
-		margin: 0 0 0.25rem 0.25rem;
+		margin: 0 0 0.375rem 0.25rem;
 		color: var(--color-dark-brown);
-		font-size: 1.375rem;
+		font-size: 1.25rem;
 		font-family: var(--font-family-eng-card-title);
 		text-transform: capitalize;
 	}
@@ -82,7 +82,7 @@ const ActivityBox = styled.ul`
 	display: flex;
 	flex-direction: column;
 	gap: 0.5rem;
-	padding: 1rem 1rem 1rem 1.5rem;
+	padding: 1.125rem 1rem 1.125rem 1.75rem;
 	width: 100%;
 	height: 100%;
 	background-color: var(--bg-color-light);
@@ -91,7 +91,7 @@ const ActivityBox = styled.ul`
 	li {
 		font-size: 1rem;
 		font-weight: 400;
-		letter-spacing: -0.85px;
+		letter-spacing: -0.5px;
 		word-spacing: 0.5px;
 		line-height: 1.375rem;
 	}

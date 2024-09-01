@@ -39,7 +39,7 @@ ${reset}
 :root {
   // width
   --max-width: 1000px;
-  --max-card-width: 730px;
+  --max-card-width: 750px;
   --max-box-width: 900px;
 
   // color

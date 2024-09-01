@@ -48,7 +48,7 @@ const Wrapper = styled.div`
 	max-width: var(--max-box-width);
 	margin: 2rem 0;
 	h1 {
-		margin: 0 0 1rem 0.5rem;
+		margin: 0 0 0.75rem 0.5rem;
 		font-family: var(--font-family-eng-title);
 		font-size: var(--font-size-title);
 		color: var(--font-color-light);
@@ -72,7 +72,7 @@ const SectorBox = styled.div`
 	h2 {
 		margin-bottom: 0.25rem;
 		font-family: var(--font-family-eng-card-title);
-		font-size: 1.375rem;
+		font-size: 1.25rem;
 		color: var(--font-color-light);
 		text-transform: capitalize;
 	}
@@ -85,6 +85,7 @@ const SkillContainer = styled.div`
 	gap: 1.5rem 1.25rem;
 	padding: 1.75rem 1rem;
 	border: 1px solid var(--font-color-light);
+	/* box-shadow: 0 0 8px 1px rgba(255, 255, 255, 0.5); */
 	border-radius: 15px;
 	@media (max-width: 768px) {
 		grid-template-columns: repeat(auto-fill, minmax(80px, auto));
@@ -99,15 +100,18 @@ const SkillBox = styled.div`
 	span {
 		color: var(--font-color-light);
 		font-family: var(--font-family-eng);
-		font-size: 0.9rem;
+		font-size: 1rem;
 		font-weight: 500;
-		letter-spacing: -0.25px;
+		letter-spacing: -0.5px;
 		text-align: center;
 		white-space: pre-wrap;
 	}
 `;
 
 const IconBox = styled.div`
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	width: 100px;
 	height: auto;
 	margin-bottom: 0.75rem;

@@ -30,7 +30,7 @@ const Wrapper = styled.div`
 	margin: 2rem 0;
 	h1 {
 		margin: 0 0 0.5rem 0.5rem;
-		color: var(--font-color-primary);
+		color: var(--color-light-orange);
 		font-family: var(--font-family-eng-title);
 		font-size: var(--font-size-title);
 		letter-spacing: -1.5px;

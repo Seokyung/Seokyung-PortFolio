@@ -83,18 +83,14 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled.h3`
-	margin: 0 0.25rem 0.5rem 0;
+	margin: 0 0.375rem 0.5rem 0;
 	text-align: right;
 	color: var(--font-color-light);
-	font-family: var(--font-family-eng-card-title);
-	font-size: 1.5rem;
-	font-weight: 700;
-	line-height: 1.5rem;
-	letter-spacing: -0.5px;
-	@media all and (max-width: 768px) {
-		font-size: 1.25rem;
-		letter-spacing: -1.25px;
-	}
+	font-family: var(--font-family-eng-title);
+	/* font-size: 1.75rem; */
+	font-size: var(--font-size-title);
+	line-height: 2.125rem;
+	letter-spacing: -1.5px;
 `;
 
 const Card = styled.div`
@@ -111,7 +107,7 @@ const Card = styled.div`
 	box-shadow: 0 0 20px 2px rgba(47, 19, 5, 0.5);
 	@media all and (max-width: 768px) {
 		flex-direction: column;
-		gap: 0.75rem;
+		gap: 1.125rem;
 		padding: 1.25rem 1rem;
 	}
 `;
@@ -125,7 +121,7 @@ const Logo = styled.div`
 		width: 100%;
 		max-width: 200px;
 		@media all and (max-width: 768px) {
-			max-width: 140px;
+			max-width: 150px;
 		}
 	}
 `;
@@ -177,13 +173,14 @@ const NameBox = styled.div`
 	h1 {
 		color: var(--font-color-primary);
 		font-family: var(--font-family-kor-title);
-		font-size: 2.25rem;
+		font-size: 2.5rem;
+		letter-spacing: -0.25px;
 	}
 	span {
 		color: var(--font-color-default);
 		font-family: var(--font-family-eng);
-		font-size: 1rem;
-		letter-spacing: -0.5px;
+		font-size: 1.25rem;
+		letter-spacing: -0.65px;
 		text-transform: capitalize;
 	}
 `;
@@ -216,7 +213,7 @@ const InfoBox = styled.div`
 	.title {
 		color: var(--font-color-primary);
 		font-family: var(--font-family-eng);
-		font-size: 1.125rem;
+		font-size: 1.25rem;
 		font-weight: 500;
 		letter-spacing: -0.25px;
 		text-transform: capitalize;
@@ -224,9 +221,9 @@ const InfoBox = styled.div`
 	}
 	.content {
 		color: var(--font-color-default);
-		font-size: 1rem;
+		font-size: 1.125rem;
 		font-weight: 400;
-		letter-spacing: -0.45px;
+		letter-spacing: -0.25px;
 		line-height: 1.125rem;
 		word-spacing: -0.8px;
 	}
