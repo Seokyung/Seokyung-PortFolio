@@ -16,12 +16,13 @@
 		"swiper": "^11.1.11",
 		"web-vitals": "^2.1.4"
 	},
-	"homepage": "https://seokyung.github.io/Seokyung-Portfolio/",
+	"homepage": "https://seokyung.github.io/Seokyung-Portfolio",
 	"scripts": {
 		"start": "react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
+		"predeploy": "npm run build",
 		"deploy": "gh-pages -d public"
 	},
 	"eslintConfig": {
