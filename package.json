@@ -2,6 +2,7 @@
 	"name": "seokyung-portfolio",
 	"version": "0.1.0",
 	"private": true,
+	"homepage": "https://seokyung.github.io/Seokyung-Portfolio",
 	"dependencies": {
 		"@testing-library/jest-dom": "^5.17.0",
 		"@testing-library/react": "^13.4.0",
@@ -16,7 +17,6 @@
 		"swiper": "^11.1.11",
 		"web-vitals": "^2.1.4"
 	},
-	"homepage": "https://seokyung.github.io/Seokyung-Portfolio",
 	"scripts": {
 		"start": "react-scripts start",
 		"build": "react-scripts build",
