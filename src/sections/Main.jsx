@@ -104,7 +104,7 @@ const Introduction = styled.div`
 		letter-spacing: 0.5px;
 		#name {
 			display: inline-block;
-			color: var(--color-dark-orange);
+			color: var(--color-orange);
 			font-size: 2.5rem;
 			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 			margin-right: 0.25rem;

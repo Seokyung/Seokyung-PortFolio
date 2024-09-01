@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { ReactComponent as LinkIcon } from "../../assets/svg/link_icon.svg";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 const ProjectBox = ({ item }) => {
 	return (
@@ -11,9 +12,9 @@ const ProjectBox = ({ item }) => {
 			<Divider />
 			<ProjectWrapper>
 				<RoleBox>
+					<span className="period">{item?.period}</span>
 					<span className="sector">{item?.sector}</span>
 					<span className="role">{item?.role}</span>
-					<span className="period">{item?.period}</span>
 				</RoleBox>
 				<ContentBox>
 					<Content>
@@ -47,9 +48,24 @@ const ProjectBox = ({ item }) => {
 						</Content>
 					)}
 				</ContentBox>
-				<ProjectModal>
-					<span>프로젝트 화면</span>
-				</ProjectModal>
+				{/* {item.imgs.length !== 0 && (
+					<ProjectSwiper>
+						<Swiper
+							spaceBetween={20}
+							slidesPerView={1}
+							onSlideChange={() => console.log("slide change")}
+							onSwiper={(swiper) => console.log(swiper)}
+						>
+							{item?.imgs.map((el, idx) => {
+								return (
+									<SwiperSlide key={el.alt}>
+										<img src={el.src} alt={el.alt} />
+									</SwiperSlide>
+								);
+							})}
+						</Swiper>
+					</ProjectSwiper>
+				)} */}
 			</ProjectWrapper>
 		</Box>
 	);
@@ -68,7 +84,7 @@ const Box = styled.div`
 const ProjectInfo = styled.div`
 	h2 {
 		margin-bottom: 0.5rem;
-		color: var(--color-light-orange);
+		color: var(--color-orange);
 		font-family: var(--font-family-kor-title);
 		font-size: 1.75rem;
 		letter-spacing: 0.75px;
@@ -77,7 +93,7 @@ const ProjectInfo = styled.div`
 	span {
 		padding-left: 2px;
 		color: var(--font-color-default);
-		font-size: 0.9rem;
+		font-size: 1rem;
 		font-weight: 400;
 		line-height: 1.125rem;
 		letter-spacing: -0.75px;
@@ -121,6 +137,13 @@ const RoleBox = styled.div`
 	.sector,
 	.role,
 	.period {
+		/* font-weight: 600; */
+	}
+	.sector {
+		font-size: 0.95rem;
+	}
+	.role {
+		font-weight: 600;
 	}
 `;
 
@@ -169,16 +192,33 @@ const Content = styled.div`
 	}
 `;
 
-const ProjectModal = styled.div`
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 30%;
+const ProjectSwiper = styled.div`
+	width: 40%;
 	height: auto;
-	aspect-ratio: 1/1;
-	background-color: #bababa;
-	border-radius: 10px;
-	span {
+	overflow: hidden;
+	.swiper {
+		display: flex;
+		width: 100%;
+		height: 100%;
+	}
+	.swiper-wrapper {
+		width: 100%;
+		height: 100%;
+	}
+	.swiper-slide {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0.5rem;
+		/* width: 100%;
+		height: 100%; */
+		background-color: #bababa;
+		border-radius: 10px;
+	}
+	img {
+		width: 100%;
+		height: auto;
+		object-fit: contain;
 	}
 	@media (max-width: 768px) {
 		width: 100%;

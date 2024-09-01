@@ -11,9 +11,9 @@ const WorkBox = ({ item }) => {
 			<Divider />
 			<ContentWrapper>
 				<RoleBox>
+					<span className="period">{item?.period}</span>
 					<span className="sector">{item?.sector}</span>
 					<span className="role">{item?.role}</span>
-					<span className="period">{item?.period}</span>
 				</RoleBox>
 				<DescriptionBox>
 					<ContentBox>
@@ -111,6 +111,12 @@ const RoleBox = styled.div`
 	.role,
 	.period {
 	}
+	.sector {
+		font-size: 0.95rem;
+	}
+	.role {
+		font-weight: 600;
+	}
 `;
 
 const DescriptionBox = styled.div`
@@ -123,7 +129,7 @@ const DescriptionBox = styled.div`
 const ContentBox = styled.div`
 	border-radius: 10px;
 	h4 {
-		color: var(--font-color-primary);
+		color: var(--color-light-orange);
 		margin-bottom: 0.5rem;
 		font-size: 1rem;
 		font-weight: 700;
