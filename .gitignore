@@ -25,6 +25,3 @@ yarn-error.log*
 
 # editor settings
 /.vscode
-
-# infos
-skg_infos.jsx
