@@ -9,14 +9,16 @@ function Skills() {
 	const renderSkills = (sector) => {
 		return (
 			<SectorBox>
-				<h2>{sector}</h2>
+				{/* <h2>{sector}</h2> */}
 				<SkillContainer>
 					{skg_skills
-						.filter((el) => el.sector === sector)
+						// .filter((el) => el.sector === sector)
 						.map((item) => {
 							return (
 								<SkillBox key={item.skillName}>
-									<img src={item.icon} alt="skill_icon" />
+									<IconBox>
+										<img src={item.icon} alt="skill_icon" />
+									</IconBox>
 									<span>{item.skillName}</span>
 								</SkillBox>
 							);
@@ -33,7 +35,7 @@ function Skills() {
 					<h1>Skills</h1>
 					<SkillWrapper>
 						{renderSkills("frontend")}
-						{renderSkills("backend")}
+						{/* {renderSkills("backend")} */}
 					</SkillWrapper>
 				</Wrapper>
 			</SectionWrapperInner>
@@ -79,7 +81,7 @@ const SectorBox = styled.div`
 const SkillContainer = styled.div`
 	width: 100%;
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(100px, auto));
+	grid-template-columns: repeat(auto-fill, minmax(120px, auto));
 	gap: 1.5rem 1.25rem;
 	padding: 1.75rem 1rem;
 	border: 1px solid var(--font-color-light);
@@ -94,16 +96,7 @@ const SkillBox = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	img {
-		width: 100%;
-		max-width: 80px;
-		height: auto;
-		@media (max-width: 768px) {
-			max-width: 60px;
-		}
-	}
 	span {
-		margin-top: 0.5rem;
 		color: var(--font-color-light);
 		font-family: var(--font-family-eng);
 		font-size: 0.9rem;
@@ -111,6 +104,21 @@ const SkillBox = styled.div`
 		letter-spacing: -0.25px;
 		text-align: center;
 		white-space: pre-wrap;
+	}
+`;
+
+const IconBox = styled.div`
+	width: 100px;
+	height: auto;
+	margin-bottom: 0.75rem;
+	@media (max-width: 768px) {
+		width: 70px;
+	}
+	@media (max-width: 320) {
+		width: 40px;
+	}
+	img {
+		width: 100%;
 	}
 `;
 
