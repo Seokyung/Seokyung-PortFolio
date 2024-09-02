@@ -6,6 +6,12 @@
 
 ---
 
+### 🔗 포트폴리오 링크
+
+https://seokyung-portfolio.vercel.app/
+
+---
+
 ### 🛠️ 사용 기술
 
 - JavaScript
