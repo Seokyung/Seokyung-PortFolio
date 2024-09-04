@@ -183,11 +183,11 @@ const Content = styled.div`
 		color: var(--color-blue);
 		svg {
 			color: inherit;
-			width: 12px;
+			width: 14px;
 			height: auto;
 		}
 		&:hover {
-			color: var(--color-light-orange);
+			font-weight: 600;
 		}
 	}
 `;

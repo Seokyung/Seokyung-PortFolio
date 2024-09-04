@@ -152,7 +152,7 @@ const ContentBox = styled.div`
 			height: auto;
 		}
 		&:hover {
-			color: var(--color-orange);
+			font-weight: 600;
 		}
 	}
 `;
