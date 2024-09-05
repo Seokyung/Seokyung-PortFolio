@@ -19,7 +19,7 @@ const ProjectBox = ({ item }) => {
 				</RoleBox>
 				<ContentBox>
 					<Content>
-						<h4>프로젝트 소개</h4>
+						<h4>📢 프로젝트 소개</h4>
 						<ul>
 							{item?.descriptions.map((el, idx) => {
 								return <li key={idx}>{el}</li>;
@@ -27,7 +27,7 @@ const ProjectBox = ({ item }) => {
 						</ul>
 					</Content>
 					<Content>
-						<h4>담당 내용</h4>
+						<h4>💡 담당 내용</h4>
 						<ul>
 							{item?.works.map((el, idx) => {
 								return <li key={idx}>{el}</li>;
@@ -35,14 +35,14 @@ const ProjectBox = ({ item }) => {
 						</ul>
 					</Content>
 					<Content>
-						<h4>Github</h4>
+						<h4>🐈‍⬛ Github</h4>
 						<a href={item?.github} target="_blank" rel="noreferrer">
 							{item?.github.slice(8)}
 						</a>
 					</Content>
 					{item.url && (
 						<Content>
-							<h4>URL</h4>
+							<h4>🔗 URL</h4>
 							<a href={item?.url} target="_blank" rel="noreferrer">
 								{item?.name} <LinkIcon />
 							</a>
