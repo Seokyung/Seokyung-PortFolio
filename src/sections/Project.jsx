@@ -25,6 +25,8 @@ function Project() {
 
 const Wrapper = styled.div`
 	margin: 2rem 0;
+	width: 100%;
+	max-width: var(--max-project-box-width);
 	h1 {
 		margin: 0 0 0.5rem 0.5rem;
 		color: var(--color-light-orange);

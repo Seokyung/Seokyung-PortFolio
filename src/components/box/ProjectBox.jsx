@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { ReactComponent as LinkIcon } from "../../assets/svg/link_icon.svg";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation } from "swiper/modules";
 
 const ProjectBox = ({ item }) => {
 	return (
@@ -48,24 +49,30 @@ const ProjectBox = ({ item }) => {
 						</Content>
 					)}
 				</ContentBox>
-				{/* {item.imgs.length !== 0 && (
+				{item.imgs.length !== 0 && (
 					<ProjectSwiper>
 						<Swiper
-							spaceBetween={20}
 							slidesPerView={1}
-							onSlideChange={() => console.log("slide change")}
-							onSwiper={(swiper) => console.log(swiper)}
+							spaceBetween={10}
+							loop={true}
+							navigation={true}
+							pagination={{
+								type: "fraction",
+							}}
+							modules={[Pagination, Navigation]}
 						>
 							{item?.imgs.map((el, idx) => {
 								return (
 									<SwiperSlide key={el.alt}>
-										<img src={el.src} alt={el.alt} />
+										<div>
+											<img src={el.src} alt={el.alt} />
+										</div>
 									</SwiperSlide>
 								);
 							})}
 						</Swiper>
 					</ProjectSwiper>
-				)} */}
+				)}
 			</ProjectWrapper>
 		</Box>
 	);
@@ -76,12 +83,12 @@ const Box = styled.div`
 	flex-direction: column;
 	padding: 1.25rem 1rem;
 	width: 100%;
-	max-width: var(--max-box-width);
 	background-color: var(--bg-color-light);
 	border-radius: 10px;
 `;
 
 const ProjectInfo = styled.div`
+	width: 100%;
 	h2 {
 		margin-bottom: 0.5rem;
 		color: var(--color-orange);
@@ -109,11 +116,11 @@ const Divider = styled.hr`
 
 const ProjectWrapper = styled.div`
 	display: flex;
-	gap: 1.5rem;
 	padding: 0.5rem;
 	width: 100%;
 	@media (max-width: 768px) {
 		flex-direction: column;
+		gap: 1.5rem;
 		padding: 0 0.25rem;
 	}
 `;
@@ -122,16 +129,13 @@ const RoleBox = styled.div`
 	display: flex;
 	flex-direction: column;
 	gap: 0.5rem;
-	width: 25%;
+	width: 30%;
+	min-width: 120px;
+	padding-right: 1rem;
 	@media (max-width: 768px) {
 		width: 100%;
-	}
-	span {
-		color: var(--font-color-default);
-		font-family: var(--font-family-eng);
-		font-size: 1rem;
-		letter-spacing: -0.25px;
-		line-height: 1.25rem;
+		min-width: unset;
+		padding-right: 0;
 	}
 	span {
 		color: var(--font-color-default);
@@ -143,7 +147,6 @@ const RoleBox = styled.div`
 	.role {
 		color: var(--font-color-primary);
 		font-weight: 600;
-		/* font-size: 1.125rem; */
 	}
 `;
 
@@ -155,7 +158,6 @@ const ContentBox = styled.div`
 `;
 
 const Content = styled.div`
-	border-radius: 10px;
 	h4 {
 		color: var(--color-light-orange);
 		margin-bottom: 0.5rem;
@@ -176,6 +178,9 @@ const Content = styled.div`
 			letter-spacing: -0.75px;
 			word-spacing: 0.5px;
 			line-height: 1.375rem;
+			.bold {
+				font-weight: 600;
+			}
 		}
 	}
 	a {
@@ -193,15 +198,21 @@ const Content = styled.div`
 `;
 
 const ProjectSwiper = styled.div`
-	width: 40%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
 	height: auto;
+	margin-left: 1rem;
 	overflow: hidden;
+	@media (max-width: 768px) {
+		width: 100%;
+		margin-left: 0;
+	}
 	.swiper {
 		display: flex;
-		width: 100%;
-		height: 100%;
-	}
-	.swiper-wrapper {
+		justify-content: center;
+		align-items: center;
 		width: 100%;
 		height: 100%;
 	}
@@ -209,19 +220,45 @@ const ProjectSwiper = styled.div`
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		padding: 0.5rem;
-		/* width: 100%;
-		height: 100%; */
-		background-color: #bababa;
-		border-radius: 10px;
-	}
-	img {
 		width: 100%;
-		height: auto;
-		object-fit: contain;
+		height: 100%;
+		div {
+			display: flex;
+			width: 100%;
+			height: 100%;
+			aspect-ratio: 1 / 1;
+			background-color: #c3c3c3;
+			border-radius: 5px;
+			@media (max-width: 768px) {
+				max-height: 400px;
+			}
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: contain;
+			}
+		}
 	}
-	@media (max-width: 768px) {
-		width: 100%;
+	.swiper-button-prev {
+		left: 4px;
+	}
+	.swiper-button-next {
+		right: 4px;
+	}
+	.swiper-button-prev,
+	.swiper-button-next {
+		width: 36px;
+		height: 40px;
+		&::after {
+			color: #898989;
+			font-size: 28px;
+		}
+	}
+	.swiper-pagination-fraction {
+		bottom: 12px;
+		color: #4c4c4c;
+		font-size: 13px;
+		letter-spacing: -0.45px;
 	}
 `;
 
