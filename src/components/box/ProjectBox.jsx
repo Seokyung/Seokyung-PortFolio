@@ -130,7 +130,7 @@ const RoleBox = styled.div`
 	flex-direction: column;
 	gap: 0.5rem;
 	width: 30%;
-	min-width: 120px;
+	min-width: 130px;
 	padding-right: 1rem;
 	@media (max-width: 768px) {
 		width: 100%;
@@ -201,9 +201,9 @@ const ProjectSwiper = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 100%;
+	width: 120%;
 	height: auto;
-	margin-left: 1rem;
+	margin-left: 1.125rem;
 	overflow: hidden;
 	@media (max-width: 768px) {
 		width: 100%;
@@ -226,39 +226,45 @@ const ProjectSwiper = styled.div`
 			display: flex;
 			width: 100%;
 			height: 100%;
-			aspect-ratio: 1 / 1;
-			background-color: #c3c3c3;
-			border-radius: 5px;
-			@media (max-width: 768px) {
-				max-height: 400px;
-			}
+			/* aspect-ratio: 1 / 1; */
+			/* background-color: #c3c3c3; */
 			img {
 				width: 100%;
 				height: 100%;
 				object-fit: contain;
+				max-height: 500px;
 			}
 		}
 	}
 	.swiper-button-prev {
-		left: 4px;
+		left: 6px;
+		@media (max-width: 768px) {
+			left: 0;
+		}
 	}
 	.swiper-button-next {
-		right: 4px;
+		right: 6px;
+		@media (max-width: 768px) {
+			right: 0;
+		}
 	}
 	.swiper-button-prev,
 	.swiper-button-next {
 		width: 36px;
-		height: 40px;
+		height: 42px;
 		&::after {
-			color: #898989;
-			font-size: 28px;
+			color: #7a7a7a;
+			font-size: 32px;
+			font-weight: 700;
 		}
 	}
 	.swiper-pagination-fraction {
 		bottom: 12px;
 		color: #4c4c4c;
-		font-size: 13px;
+		font-size: 14px;
+		font-weight: 600;
 		letter-spacing: -0.45px;
+		/* text-shadow: var(--color-white) 0 0 2px; */
 	}
 `;
 
