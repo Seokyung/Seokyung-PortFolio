@@ -1,3 +1,4 @@
+// icons
 import js_icon from "../assets/img/javascript_icon.png";
 import react_icon from "../assets/img/react_icon.png";
 import redux_icon from "../assets/img/redux_icon.png";
@@ -10,6 +11,28 @@ import styled_components_icon from "../assets/img/styled_components_icon.png";
 import firebase_icon from "../assets/img/firebase_icon.png";
 import c_icon from "../assets/img/c_icon.png";
 import cplusplus_icon from "../assets/img/c++_icon.png";
+
+// screenshots
+import im1 from "../assets/img/projects/im_1.jpg";
+import im2 from "../assets/img/projects/im_2.jpg";
+import im3 from "../assets/img/projects/im_3.jpg";
+
+import rolling1 from "../assets/img/projects/rolling_1.png";
+import rolling2 from "../assets/img/projects/rolling_2.png";
+import rolling3 from "../assets/img/projects/rolling_3.png";
+import rolling4 from "../assets/img/projects/rolling_4.png";
+import rolling5 from "../assets/img/projects/rolling_5.png";
+import rolling6 from "../assets/img/projects/rolling_6.png";
+
+import hellogachon1 from "../assets/img/projects/hellogachon_1.png";
+import hellogachon2 from "../assets/img/projects/hellogachon_2.png";
+import hellogachon3 from "../assets/img/projects/hellogachon_3.png";
+import hellogachon4 from "../assets/img/projects/hellogachon_4.png";
+import hellogachon5 from "../assets/img/projects/hellogachon_5.png";
+import hellogachon6 from "../assets/img/projects/hellogachon_6.png";
+import hellogachon7 from "../assets/img/projects/hellogachon_7.png";
+import hellogachon8 from "../assets/img/projects/hellogachon_8.png";
+import hellogachon9 from "../assets/img/projects/hellogachon_9.png";
 
 export const skg_info = {
 	name: "지서경",
@@ -105,9 +128,12 @@ export const skg_projects = [
 		github: "https://github.com/Seokyung/Rolling-Rolling",
 		url: "https://rolling-rolling.web.app/",
 		imgs: [
-			{ src: bootstrap_icon, alt: "11" },
-			{ src: react_icon, alt: "22" },
-			{ src: scss_icon, alt: "33" },
+			{ src: rolling1, alt: "rolling1" },
+			{ src: rolling2, alt: "rolling2" },
+			{ src: rolling3, alt: "rolling3" },
+			{ src: rolling4, alt: "rolling4" },
+			{ src: rolling5, alt: "rolling5" },
+			{ src: rolling6, alt: "rolling6" },
 		],
 	},
 	{
@@ -128,7 +154,11 @@ export const skg_projects = [
 		],
 		skills: ["ReactJS", "JavaScript", "HTML/CSS"],
 		github: "https://github.com/Wacathon/frontend",
-		imgs: [],
+		imgs: [
+			{ src: im1, alt: "im1" },
+			{ src: im2, alt: "im2" },
+			{ src: im3, alt: "im3" },
+		],
 	},
 	{
 		id: 3,
@@ -149,7 +179,17 @@ export const skg_projects = [
 		],
 		skills: ["Unity", "C#"],
 		github: "https://github.com/HelloGachon/HelloGachon",
-		imgs: [],
+		imgs: [
+			{ src: hellogachon1, alt: "hellogachon1" },
+			{ src: hellogachon2, alt: "hellogachon2" },
+			{ src: hellogachon3, alt: "hellogachon3" },
+			{ src: hellogachon4, alt: "hellogachon4" },
+			{ src: hellogachon5, alt: "hellogachon5" },
+			{ src: hellogachon6, alt: "hellogachon6" },
+			{ src: hellogachon7, alt: "hellogachon7" },
+			{ src: hellogachon8, alt: "hellogachon8" },
+			{ src: hellogachon9, alt: "hellogachon9" },
+		],
 	},
 ];
 

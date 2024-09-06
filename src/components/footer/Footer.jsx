@@ -16,12 +16,12 @@ const Wrapper = styled.footer`
 	justify-content: center;
 	align-items: center;
 	width: 100%;
-	height: 15vh;
+	height: 120px;
 	padding: 1rem;
 	span {
 		color: var(--font-color-light);
 		font-family: var(--font-family-kor);
-		font-size: 0.9rem;
+		font-size: 0.875rem;
 		font-weight: 300;
 		letter-spacing: -0.35px;
 		word-spacing: 1px;

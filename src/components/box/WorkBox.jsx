@@ -17,7 +17,7 @@ const WorkBox = ({ item }) => {
 				</RoleBox>
 				<DescriptionBox>
 					<ContentBox>
-						<h4>주요 업무</h4>
+						<h4>👩‍💻 주요 업무</h4>
 						<ul>
 							{item?.works.map((el, idx) => {
 								return <li key={idx}>{el}</li>;
@@ -25,7 +25,7 @@ const WorkBox = ({ item }) => {
 						</ul>
 					</ContentBox>
 					<ContentBox>
-						<h4>URL</h4>
+						<h4>🔗 URL</h4>
 						<ul>
 							{item?.links.map((el, idx) => {
 								return (
@@ -152,7 +152,7 @@ const ContentBox = styled.div`
 			height: auto;
 		}
 		&:hover {
-			color: var(--color-orange);
+			font-weight: 600;
 		}
 	}
 `;

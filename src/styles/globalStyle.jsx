@@ -38,13 +38,15 @@ ${reset}
 }
 :root {
   // width
-  --max-width: 1000px;
+  --max-width: 1100px;
   --max-card-width: 750px;
   --max-box-width: 900px;
+  --max-project-box-width: 1000px;
 
   // color
   --color-white: #f8f8f8;
   --color-black: #120f06;
+  --color-grey: #5B5B5B;
   --color-dark-orange: #c06016;
   --color-light-orange: #c4986b;
   --color-orange: #e6781e;
@@ -67,7 +69,7 @@ ${reset}
   --font-color-default: #120f06;
   --font-color-primary: #e6781e;
   --font-color-secondary: #120f06;
-  --font-color-grey: #5e5e5e;
+  --font-color-grey: #5B5B5B;
   --font-color-light: #f8f8f8;
 
   --font-size-default: 1rem;
@@ -75,7 +77,6 @@ ${reset}
 
   // background
   --bg-color-default: #585140;
-  --bg-color-primary: #3e3e3e;
   --bg-color-secondary: #e6781e;
   --bg-color-light: #f8f8f8;
 
@@ -116,7 +117,7 @@ ${reset}
   }
   hr {
     border: none;
-    background-color: #5e5e5e;
+    background-color: var(--color-grey);
   }
 
   // header animation

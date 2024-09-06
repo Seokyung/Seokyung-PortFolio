@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { ReactComponent as LinkIcon } from "../../assets/svg/link_icon.svg";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation } from "swiper/modules";
 
 const ProjectBox = ({ item }) => {
 	return (
@@ -18,7 +19,7 @@ const ProjectBox = ({ item }) => {
 				</RoleBox>
 				<ContentBox>
 					<Content>
-						<h4>프로젝트 소개</h4>
+						<h4>📢 프로젝트 소개</h4>
 						<ul>
 							{item?.descriptions.map((el, idx) => {
 								return <li key={idx}>{el}</li>;
@@ -26,7 +27,7 @@ const ProjectBox = ({ item }) => {
 						</ul>
 					</Content>
 					<Content>
-						<h4>담당 내용</h4>
+						<h4>💡 담당 내용</h4>
 						<ul>
 							{item?.works.map((el, idx) => {
 								return <li key={idx}>{el}</li>;
@@ -34,38 +35,44 @@ const ProjectBox = ({ item }) => {
 						</ul>
 					</Content>
 					<Content>
-						<h4>Github</h4>
+						<h4>🐈‍⬛ Github</h4>
 						<a href={item?.github} target="_blank" rel="noreferrer">
 							{item?.github.slice(8)}
 						</a>
 					</Content>
 					{item.url && (
 						<Content>
-							<h4>URL</h4>
+							<h4>🔗 URL</h4>
 							<a href={item?.url} target="_blank" rel="noreferrer">
 								{item?.name} <LinkIcon />
 							</a>
 						</Content>
 					)}
 				</ContentBox>
-				{/* {item.imgs.length !== 0 && (
+				{item.imgs.length !== 0 && (
 					<ProjectSwiper>
 						<Swiper
-							spaceBetween={20}
 							slidesPerView={1}
-							onSlideChange={() => console.log("slide change")}
-							onSwiper={(swiper) => console.log(swiper)}
+							spaceBetween={10}
+							loop={true}
+							navigation={true}
+							pagination={{
+								type: "fraction",
+							}}
+							modules={[Pagination, Navigation]}
 						>
 							{item?.imgs.map((el, idx) => {
 								return (
 									<SwiperSlide key={el.alt}>
-										<img src={el.src} alt={el.alt} />
+										<div>
+											<img src={el.src} alt={el.alt} />
+										</div>
 									</SwiperSlide>
 								);
 							})}
 						</Swiper>
 					</ProjectSwiper>
-				)} */}
+				)}
 			</ProjectWrapper>
 		</Box>
 	);
@@ -76,12 +83,12 @@ const Box = styled.div`
 	flex-direction: column;
 	padding: 1.25rem 1rem;
 	width: 100%;
-	max-width: var(--max-box-width);
 	background-color: var(--bg-color-light);
 	border-radius: 10px;
 `;
 
 const ProjectInfo = styled.div`
+	width: 100%;
 	h2 {
 		margin-bottom: 0.5rem;
 		color: var(--color-orange);
@@ -109,11 +116,11 @@ const Divider = styled.hr`
 
 const ProjectWrapper = styled.div`
 	display: flex;
-	gap: 1.5rem;
 	padding: 0.5rem;
 	width: 100%;
 	@media (max-width: 768px) {
 		flex-direction: column;
+		gap: 1.5rem;
 		padding: 0 0.25rem;
 	}
 `;
@@ -122,16 +129,13 @@ const RoleBox = styled.div`
 	display: flex;
 	flex-direction: column;
 	gap: 0.5rem;
-	width: 25%;
+	width: 30%;
+	min-width: 130px;
+	padding-right: 1rem;
 	@media (max-width: 768px) {
 		width: 100%;
-	}
-	span {
-		color: var(--font-color-default);
-		font-family: var(--font-family-eng);
-		font-size: 1rem;
-		letter-spacing: -0.25px;
-		line-height: 1.25rem;
+		min-width: unset;
+		padding-right: 0;
 	}
 	span {
 		color: var(--font-color-default);
@@ -143,7 +147,6 @@ const RoleBox = styled.div`
 	.role {
 		color: var(--font-color-primary);
 		font-weight: 600;
-		/* font-size: 1.125rem; */
 	}
 `;
 
@@ -155,7 +158,6 @@ const ContentBox = styled.div`
 `;
 
 const Content = styled.div`
-	border-radius: 10px;
 	h4 {
 		color: var(--color-light-orange);
 		margin-bottom: 0.5rem;
@@ -176,6 +178,9 @@ const Content = styled.div`
 			letter-spacing: -0.75px;
 			word-spacing: 0.5px;
 			line-height: 1.375rem;
+			.bold {
+				font-weight: 600;
+			}
 		}
 	}
 	a {
@@ -183,25 +188,31 @@ const Content = styled.div`
 		color: var(--color-blue);
 		svg {
 			color: inherit;
-			width: 12px;
+			width: 14px;
 			height: auto;
 		}
 		&:hover {
-			color: var(--color-light-orange);
+			font-weight: 600;
 		}
 	}
 `;
 
 const ProjectSwiper = styled.div`
-	width: 40%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 120%;
 	height: auto;
+	margin-left: 1.125rem;
 	overflow: hidden;
+	@media (max-width: 768px) {
+		width: 100%;
+		margin-left: 0;
+	}
 	.swiper {
 		display: flex;
-		width: 100%;
-		height: 100%;
-	}
-	.swiper-wrapper {
+		justify-content: center;
+		align-items: center;
 		width: 100%;
 		height: 100%;
 	}
@@ -209,19 +220,60 @@ const ProjectSwiper = styled.div`
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		padding: 0.5rem;
-		/* width: 100%;
-		height: 100%; */
-		background-color: #bababa;
-		border-radius: 10px;
-	}
-	img {
 		width: 100%;
-		height: auto;
-		object-fit: contain;
+		height: 100%;
+		div {
+			display: flex;
+			width: 100%;
+			height: 100%;
+			/* aspect-ratio: 1 / 1; */
+			/* background-color: #c3c3c3; */
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: contain;
+				max-height: 500px;
+			}
+		}
 	}
-	@media (max-width: 768px) {
-		width: 100%;
+	.swiper-button-prev {
+		left: 6px;
+		@media (max-width: 768px) {
+			left: 0;
+		}
+	}
+	.swiper-button-next {
+		right: 6px;
+		@media (max-width: 768px) {
+			right: 0;
+		}
+	}
+	.swiper-button-prev,
+	.swiper-button-next {
+		width: 30px;
+		height: 42px;
+		background-color: rgba(18, 15, 6, 0.2);
+		border-radius: 5px;
+		&::after {
+			color: var(--color-white);
+			font-size: 32px;
+			font-weight: 700;
+		}
+	}
+	.swiper-pagination-fraction {
+		left: 50%;
+		bottom: 12px;
+		transform: translateX(-50%);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 38px;
+		height: 20px;
+		color: var(--color-white);
+		font-size: 14px;
+		font-weight: 500;
+		background-color: rgba(18, 15, 6, 0.2);
+		border-radius: 5px;
 	}
 `;
 
