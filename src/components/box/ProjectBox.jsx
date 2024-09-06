@@ -250,21 +250,30 @@ const ProjectSwiper = styled.div`
 	}
 	.swiper-button-prev,
 	.swiper-button-next {
-		width: 36px;
+		width: 30px;
 		height: 42px;
+		background-color: rgba(18, 15, 6, 0.2);
+		border-radius: 5px;
 		&::after {
-			color: #7a7a7a;
+			color: var(--color-white);
 			font-size: 32px;
 			font-weight: 700;
 		}
 	}
 	.swiper-pagination-fraction {
+		left: 50%;
 		bottom: 12px;
-		color: #4c4c4c;
+		transform: translateX(-50%);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 38px;
+		height: 20px;
+		color: var(--color-white);
 		font-size: 14px;
-		font-weight: 600;
-		letter-spacing: -0.45px;
-		/* text-shadow: var(--color-white) 0 0 2px; */
+		font-weight: 500;
+		background-color: rgba(18, 15, 6, 0.2);
+		border-radius: 5px;
 	}
 `;
 
