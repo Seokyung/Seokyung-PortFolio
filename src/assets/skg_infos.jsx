@@ -78,6 +78,7 @@ export const skg_work_experiences = [
 		id: 1,
 		companyName: "(주)하우투약",
 		companyInfo: "건강기능식품 커머스 스타트업",
+		companyUrl: "https://howtoyak.com/",
 		sector: "Intern",
 		role: "Frontend Developer",
 		period: "2024.02 - 2024.05",
@@ -88,7 +89,16 @@ export const skg_work_experiences = [
 			"웹사이트 성능 최적화 업무를 진행하면서 폰트 최적화, 이미지 최적화, bundle 크기 줄이기 등 클라이언트 단에서의 성능 최적화 방안들을 비교/연구하여 메인 화면 첫 로드 속도를 기존 4초에서 2초대로 줄임",
 			"NextJS를 이용해 회사 랜딩 페이지 개발",
 		],
-		skills: [],
+		skills: [
+			"Next.js",
+			"ReactJS",
+			"JavaScript",
+			"HTML/CSS",
+			"AWS EC2",
+			"AWS Amplify",
+			"AWS S3",
+			"Zeplin",
+		],
 		links: [
 			{
 				siteName: "당영몰",
@@ -110,13 +120,13 @@ export const skg_projects = [
 	{
 		id: 1,
 		name: "Rolling-Rolling",
-		title: "웹으로 즐기는 추억의 롤링페이퍼",
+		title: "웹으로 즐기는 추억의 롤링 페이퍼",
 		sector: "Toy Project",
 		role: "Web Frontend Developer",
 		period: "2023.03 - 2023.06",
 		descriptions: [
-			"웹으로 롤링페이퍼를 만들고 지인들과 공유할 수 있는 웹 서비스",
-			"개인 프로젝트로 제작한 서비스로 1인 기획, 개발, 디자인, 배포, 운영중",
+			"웹으로 롤링 페이퍼를 만들고 지인들과 공유할 수 있는 웹 서비스",
+			"개인 프로젝트로 제작한 서비스로, 1인 기획•개발•디자인•배포•운영 중",
 		],
 		works: [
 			"서비스 기획",
@@ -124,7 +134,7 @@ export const skg_projects = [
 			"Google Firebase를 이용해 서버, 데이터베이스 연결",
 			"Redux를 이용해 상태 관리",
 		],
-		skills: ["ReactJS", "JavaScript", "Redux", "Firebase", "HTML/CSS"],
+		skills: ["ReactJS", "Redux", "JavaScript", "Firebase", "HTML/CSS"],
 		github: "https://github.com/Seokyung/Rolling-Rolling",
 		url: "https://rolling-rolling.web.app/",
 		imgs: [
@@ -139,20 +149,20 @@ export const skg_projects = [
 	{
 		id: 2,
 		name: "IM",
-		title: "주변인들의 평가와 피드백으로 만들어나가는 나만의 온라인 명함",
+		title: "주변인들의 평가와 피드백으로 만들어 나가는 나만의 온라인 명함",
 		sector: "Team Project",
 		role: "Web Frontend Developer",
 		period: "2023.08",
 		descriptions: [
-			"가천대학교 제 1회 학생 주도 해커톤 대회(와글와글 해커톤)에서 우수상을 수상한 프로젝트",
-			"주변인들의 피드백과 평가를 토대로 육각형 지표 그래프를 생성해 좀 더 객관적인 내 강점들을 부각시킬 수 있는 온라인 명함 제공",
+			"가천대학교 제1회 학생 주도 해커톤 대회(와글와글 해커톤)에서 우수상을 받은 프로젝트",
+			"주변인들의 피드백과 평가를 토대로 육각형 지표 그래프를 생성해 좀 더 객관적인 내 강점들을 부각할 수 있는 온라인 명함 제공",
 		],
 		works: [
 			"서비스 프론트엔드 기능 개발 (명함 생성, 사용자 정보 설정, 명함 공유, 피드백 제출 등)",
 			"서비스 UX/UI 구현",
 			"육각형 지표 데이터 시각화",
 		],
-		skills: ["ReactJS", "JavaScript", "HTML/CSS"],
+		skills: ["ReactJS", "JavaScript", "HTML/CSS", "Bootstrap"],
 		github: "https://github.com/Wacathon/frontend",
 		imgs: [
 			{ src: im1, alt: "im1" },
@@ -168,13 +178,13 @@ export const skg_projects = [
 		role: "Game Client Developer",
 		period: "2021.03 - 2021.06",
 		descriptions: [
-			"가천대학교 컴퓨터공학과 새내기가 학교 생활의 전반적인 부분을 게임으로 체험해 볼 수 있는 가이드 게임",
-			"모바일, PC버전 모두 지원하는 Top-Down RPG 형식의 픽셀 게임",
+			"가천대학교 컴퓨터공학과 새내기가 학교생활의 전반적인 부분을 게임으로 체험해 볼 수 있는 가이드 게임",
+			"모바일, PC 버전 모두 지원하는 Top-Down RPG 형식의 픽셀 게임",
 		],
 		works: [
 			"서비스 기획, 개발 방향 설정, 스토리 구성",
 			"캐릭터 능력치 로직 개발",
-			"수강신청 미니게임 구현",
+			"수강 신청 미니게임 구현",
 			"Asset 제작 (교내 맵, 배경, 구조물, 아이콘 등)",
 		],
 		skills: ["Unity", "C#"],
@@ -217,12 +227,12 @@ export const skg_activities = [
 	{
 		id: 5,
 		sector: "awards",
-		title: "제 1회 가천대학교 와글와글 해커톤 우수상 수상 (2023.08)",
+		title: "제1회 가천대학교 와글와글 해커톤 우수상 수상 (2023.08)",
 	},
 	{
 		id: 6,
 		sector: "etc",
-		title: "디랩 코딩학원 Robotics 교사 재직 (2020.04 - 2020.08)",
+		title: "디랩 코딩학원 Robotics 교사 재직 (2020.04 ~ 2020.08)",
 	},
 ];
 

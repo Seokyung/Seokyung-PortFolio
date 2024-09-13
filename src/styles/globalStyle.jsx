@@ -27,6 +27,7 @@ ${reset}
   --color-white: #f8f8f8;
   --color-black: #120f06;
   --color-grey: #5B5B5B;
+  --color-light-grey: #898989;
   --color-dark-orange: #c06016;
   --color-light-orange: #c4986b;
   --color-orange: #e6781e;
