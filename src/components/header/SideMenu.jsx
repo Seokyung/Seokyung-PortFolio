@@ -29,7 +29,7 @@ function SideMenu({ isSideMenuOpen, setIsSideMenuOpen, scrollToSection }) {
 		<SideMenuOuter id="side-menu-outer" $isSideMenuOpen={isSideMenuOpen}>
 			<SideMenuInner id="side-menu-inner" $isSideMenuOpen={isSideMenuOpen}>
 				<SideMenuHeader>
-					<h5>Menu</h5>
+					<h2>프론트엔드 개발자 지서경</h2>
 					<button onClick={closeMenu}>
 						<CloseIcon />
 					</button>
@@ -83,12 +83,12 @@ const SideMenuHeader = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	h5 {
+	h2 {
 		color: var(--font-color-light);
-		font-family: var(--font-family-eng);
-		font-size: 1.25rem;
+		font-size: 1.125rem;
 		font-weight: 600;
-		letter-spacing: -0.45px;
+		line-height: 1.25rem;
+		letter-spacing: 0.15px;
 	}
 	button {
 		display: flex;

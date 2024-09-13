@@ -29,7 +29,7 @@ function Header() {
 			<HeaderWrapper>
 				<Logo href="/">
 					<img src={seokyung_logo} alt="seokyung_logo" />
-					<h1>프론트엔드 개발자 지서경</h1>
+					<h2>프론트엔드 개발자 지서경</h2>
 				</Logo>
 				<Nav>
 					<ul>
@@ -83,13 +83,13 @@ const Logo = styled.a`
 		width: 30px;
 		height: auto;
 	}
-	h1 {
+	h2 {
 		flex: 1 1 auto;
 		color: var(--font-color-light);
 		font-size: 1rem;
-		font-weight: 600;
-		line-height: 1.5rem;
-		letter-spacing: 0.5px;
+		font-weight: 700;
+		line-height: 1.25rem;
+		letter-spacing: 0.15px;
 		@media all and (max-width: 320px) {
 			display: none;
 		}
