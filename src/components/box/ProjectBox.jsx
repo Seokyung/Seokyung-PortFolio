@@ -35,6 +35,14 @@ const ProjectBox = ({ item }) => {
 						</ul>
 					</Content>
 					<Content>
+						<h4>🛠️ 사용 기술 스택</h4>
+						<div className="tech">
+							{item?.skills.map((el, idx) => {
+								return <span key={idx}>{el}</span>;
+							})}
+						</div>
+					</Content>
+					<Content>
 						<h4>🐈‍⬛ Github</h4>
 						<a href={item?.github} target="_blank" rel="noreferrer">
 							{item?.github.slice(8)}
@@ -181,6 +189,19 @@ const Content = styled.div`
 			.bold {
 				font-weight: 600;
 			}
+		}
+	}
+	.tech {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		padding-left: 1.125rem;
+		span {
+			padding: 0.25rem 0.375rem;
+			color: var(--font-color-light);
+			font-size: 0.9rem;
+			background-color: var(--color-light-grey);
+			border-radius: 5px;
 		}
 	}
 	a {

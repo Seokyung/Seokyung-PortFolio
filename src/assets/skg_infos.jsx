@@ -88,7 +88,16 @@ export const skg_work_experiences = [
 			"웹사이트 성능 최적화 업무를 진행하면서 폰트 최적화, 이미지 최적화, bundle 크기 줄이기 등 클라이언트 단에서의 성능 최적화 방안들을 비교/연구하여 메인 화면 첫 로드 속도를 기존 4초에서 2초대로 줄임",
 			"NextJS를 이용해 회사 랜딩 페이지 개발",
 		],
-		skills: [],
+		skills: [
+			"Next.js",
+			"ReactJS",
+			"JavaScript",
+			"HTML/CSS",
+			"AWS EC2",
+			"AWS Amplify",
+			"AWS S3",
+			"Zeplin",
+		],
 		links: [
 			{
 				siteName: "당영몰",
@@ -124,7 +133,7 @@ export const skg_projects = [
 			"Google Firebase를 이용해 서버, 데이터베이스 연결",
 			"Redux를 이용해 상태 관리",
 		],
-		skills: ["ReactJS", "JavaScript", "Redux", "Firebase", "HTML/CSS"],
+		skills: ["ReactJS", "Redux", "JavaScript", "Firebase", "HTML/CSS"],
 		github: "https://github.com/Seokyung/Rolling-Rolling",
 		url: "https://rolling-rolling.web.app/",
 		imgs: [
@@ -152,7 +161,7 @@ export const skg_projects = [
 			"서비스 UX/UI 구현",
 			"육각형 지표 데이터 시각화",
 		],
-		skills: ["ReactJS", "JavaScript", "HTML/CSS"],
+		skills: ["ReactJS", "JavaScript", "HTML/CSS", "Bootstrap"],
 		github: "https://github.com/Wacathon/frontend",
 		imgs: [
 			{ src: im1, alt: "im1" },

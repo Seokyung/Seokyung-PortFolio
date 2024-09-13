@@ -25,6 +25,14 @@ const WorkBox = ({ item }) => {
 						</ul>
 					</ContentBox>
 					<ContentBox>
+						<h4>🛠️ 사용 기술 스택</h4>
+						<div className="tech">
+							{item?.skills.map((el, idx) => {
+								return <span key={idx}>{el}</span>;
+							})}
+						</div>
+					</ContentBox>
+					<ContentBox>
 						<h4>🔗 URL</h4>
 						<ul>
 							{item?.links.map((el, idx) => {
@@ -142,6 +150,19 @@ const ContentBox = styled.div`
 			letter-spacing: -0.75px;
 			word-spacing: 0.5px;
 			line-height: 1.375rem;
+		}
+	}
+	.tech {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		padding-left: 1.125rem;
+		span {
+			padding: 0.25rem 0.375rem;
+			color: var(--font-color-light);
+			font-size: 0.9rem;
+			background-color: var(--color-light-grey);
+			border-radius: 5px;
 		}
 	}
 	a {
