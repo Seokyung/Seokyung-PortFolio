@@ -139,11 +139,11 @@ const RoleBox = styled.div`
 	gap: 0.5rem;
 	width: 30%;
 	min-width: 130px;
-	padding-right: 1rem;
+	margin-right: 1rem;
 	@media (max-width: 768px) {
 		width: 100%;
 		min-width: unset;
-		padding-right: 0;
+		margin-right: 0;
 	}
 	span {
 		color: var(--font-color-default);
@@ -178,7 +178,7 @@ const Content = styled.div`
 		display: flex;
 		flex-direction: column;
 		gap: 0.5rem;
-		padding-left: 1.125rem;
+		padding-left: 1rem;
 		list-style-type: "- ";
 		li {
 			color: var(--font-color-default);
@@ -194,8 +194,7 @@ const Content = styled.div`
 	.tech {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 0.5rem;
-		padding-left: 1.125rem;
+		gap: 0.375rem;
 		span {
 			padding: 0.25rem 0.375rem;
 			color: var(--font-color-light);
@@ -205,8 +204,9 @@ const Content = styled.div`
 		}
 	}
 	a {
-		padding-left: 1.125rem;
 		color: var(--color-blue);
+		letter-spacing: -0.5px;
+		line-height: 1.25rem;
 		svg {
 			color: inherit;
 			width: 14px;
@@ -222,7 +222,7 @@ const ProjectSwiper = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 120%;
+	width: 110%;
 	height: auto;
 	margin-left: 1.125rem;
 	overflow: hidden;

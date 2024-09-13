@@ -2,10 +2,14 @@ import styled from "styled-components";
 import { ReactComponent as LinkIcon } from "../../assets/svg/link_icon.svg";
 
 const WorkBox = ({ item }) => {
+	const openCompanySite = () => {
+		window.open(item.companyUrl);
+	};
+
 	return (
 		<Box key={item?.id}>
 			<CompanyBox>
-				<h2>{item?.companyName}</h2>
+				<h2 onClick={openCompanySite}>{item?.companyName}</h2>
 				<span>{item?.companyInfo}</span>
 			</CompanyBox>
 			<Divider />
@@ -64,12 +68,30 @@ const Box = styled.div`
 
 const CompanyBox = styled.div`
 	h2 {
+		position: relative;
+		cursor: pointer;
+		width: fit-content;
 		margin-bottom: 0.5rem;
 		color: var(--font-color-primary);
 		font-family: var(--font-family-kor-title);
 		font-size: 1.75rem;
 		letter-spacing: 0.75px;
 		line-height: 2rem;
+		&:hover {
+			color: var(--color-dark-orange);
+			&:after {
+				background-color: var(--color-dark-orange);
+			}
+		}
+		&:after {
+			content: "";
+			position: absolute;
+			bottom: -3px;
+			left: 2px;
+			width: calc(100% - 4px);
+			height: 2px;
+			background-color: var(--font-color-primary);
+		}
 	}
 	span {
 		padding-left: 4px;
@@ -142,7 +164,7 @@ const ContentBox = styled.div`
 		display: flex;
 		flex-direction: column;
 		gap: 0.5rem;
-		padding-left: 1.125rem;
+		padding-left: 1rem;
 		list-style-type: "- ";
 		li {
 			color: var(--font-color-default);
@@ -155,8 +177,7 @@ const ContentBox = styled.div`
 	.tech {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 0.5rem;
-		padding-left: 1.125rem;
+		gap: 0.375rem;
 		span {
 			padding: 0.25rem 0.375rem;
 			color: var(--font-color-light);
@@ -167,9 +188,11 @@ const ContentBox = styled.div`
 	}
 	a {
 		color: var(--color-blue);
+		letter-spacing: -0.5px;
+		line-height: 1.25rem;
 		svg {
 			color: inherit;
-			width: 12px;
+			width: 14px;
 			height: auto;
 		}
 		&:hover {

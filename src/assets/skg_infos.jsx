@@ -78,6 +78,7 @@ export const skg_work_experiences = [
 		id: 1,
 		companyName: "(주)하우투약",
 		companyInfo: "건강기능식품 커머스 스타트업",
+		companyUrl: "https://howtoyak.com/",
 		sector: "Intern",
 		role: "Frontend Developer",
 		period: "2024.02 - 2024.05",
