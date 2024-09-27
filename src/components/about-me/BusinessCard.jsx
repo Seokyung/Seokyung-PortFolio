@@ -21,9 +21,11 @@ const BusinessCard = () => {
 							<span>{skg_info.eng_name}</span>
 						</NameBox>
 						<IconBox>
-							<a className="content" href={`tel:${skg_info.tel}`}>
-								<PhoneIcon />
-							</a>
+							{skg_info.tel && (
+								<a className="content" href={`tel:${skg_info.tel}`}>
+									<PhoneIcon />
+								</a>
+							)}
 							<a className="content" href={`mailto:${skg_info.email}`}>
 								<EmailIcon />
 							</a>
@@ -51,14 +53,18 @@ const BusinessCard = () => {
 							<span className="title">birth</span>
 							<span className="content">{skg_info.birth}</span>
 						</InfoBox>
-						<InfoBox>
-							<span className="title">location</span>
-							<span className="content">{skg_info.location}</span>
-						</InfoBox>
-						<InfoBox>
-							<span className="title">tel</span>
-							<span className="content">{skg_info.tel}</span>
-						</InfoBox>
+						{skg_info.location && (
+							<InfoBox>
+								<span className="title">location</span>
+								<span className="content">{skg_info.location}</span>
+							</InfoBox>
+						)}
+						{skg_info.tel && (
+							<InfoBox>
+								<span className="title">tel</span>
+								<span className="content">{skg_info.tel}</span>
+							</InfoBox>
+						)}
 						<InfoBox>
 							<span className="title">email</span>
 							<span className="content">{skg_info.email}</span>
