@@ -1,9 +1,16 @@
 import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
+import VitroCore from "../assets/fonts/VitroCore.woff2";
 import MilkAndHoney from "../assets/fonts/MilkAndHoney.woff";
 
 export const GlobalStyle = createGlobalStyle`
 ${reset}
+@font-face {
+    font-family: 'VitroCore';
+    src: local('VitroCore'), local('VitroCore');
+    src: url(${VitroCore}) format('woff2');
+    font-style: normal;
+}
 @font-face {
     font-family: 'RixXladywatermelonR';
     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-4@1.0/RixXladywatermelonR.woff2') format('woff2');
